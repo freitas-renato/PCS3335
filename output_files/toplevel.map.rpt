@@ -1,0 +1,918 @@
+Analysis & Synthesis report for toplevel
+Sun Jun 03 02:08:42 2018
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Port Connectivity Checks: "setesegmentos:conv5"
+ 13. Port Connectivity Checks: "fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add4"
+ 14. Port Connectivity Checks: "fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add3"
+ 15. Port Connectivity Checks: "fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add1|somador4b:BADD2"
+ 16. Port Connectivity Checks: "fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add1"
+ 17. Port Connectivity Checks: "fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_6"
+ 18. Port Connectivity Checks: "fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_5"
+ 19. Port Connectivity Checks: "fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_4"
+ 20. Port Connectivity Checks: "fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_3"
+ 21. Port Connectivity Checks: "fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_2"
+ 22. Port Connectivity Checks: "fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_1"
+ 23. Port Connectivity Checks: "fluxoDeDados:dados|divisor100hz:div100|division_counter:decade"
+ 24. Port Connectivity Checks: "fluxoDeDados:dados|divisor100hz:div100|division_counter:b7"
+ 25. Port Connectivity Checks: "fluxoDeDados:dados|divisor100hz:div100|division_counter:b6"
+ 26. Port Connectivity Checks: "fluxoDeDados:dados|divisor100hz:div100|division_counter:b5"
+ 27. Port Connectivity Checks: "fluxoDeDados:dados|divisor100hz:div100|division_counter:b4"
+ 28. Port Connectivity Checks: "fluxoDeDados:dados|divisor100hz:div100|division_counter:b3"
+ 29. Port Connectivity Checks: "fluxoDeDados:dados|divisor100hz:div100|division_counter:b2"
+ 30. Port Connectivity Checks: "fluxoDeDados:dados|divisor100hz:div100|division_counter:b1"
+ 31. Port Connectivity Checks: "fluxoDeDados:dados"
+ 32. Post-Synthesis Netlist Statistics for Top Partition
+ 33. Elapsed Time Per Partition
+ 34. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sun Jun 03 02:08:42 2018       ;
+; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                   ; toplevel                                    ;
+; Top-level Entity Name           ; unidadeDeControle                           ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 80                                          ;
+; Total pins                      ; 51                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CEBA4F23C7        ;                    ;
+; Top-level entity name                                                           ; unidadeDeControle  ; toplevel           ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                               ;
++--------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path     ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                    ; Library ;
++--------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
+; somadores/somadorBCD.vhd             ; yes             ; User VHDL File  ; C:/Users/renat/Documents/Poli/exp9-relogio/somadores/somadorBCD.vhd             ;         ;
+; somadores/somador4b.vhd              ; yes             ; User VHDL File  ; C:/Users/renat/Documents/Poli/exp9-relogio/somadores/somador4b.vhd              ;         ;
+; somadores/somador1b.vhd              ; yes             ; User VHDL File  ; C:/Users/renat/Documents/Poli/exp9-relogio/somadores/somador1b.vhd              ;         ;
+; divisores-clock/divisor100hz.vhd     ; yes             ; User VHDL File  ; C:/Users/renat/Documents/Poli/exp9-relogio/divisores-clock/divisor100hz.vhd     ;         ;
+; divisores-clock/division_counter.vhd ; yes             ; User VHDL File  ; C:/Users/renat/Documents/Poli/exp9-relogio/divisores-clock/division_counter.vhd ;         ;
+; assets/setesegmentos.vhd             ; yes             ; User VHDL File  ; C:/Users/renat/Documents/Poli/exp9-relogio/assets/setesegmentos.vhd             ;         ;
+; assets/jogador.vhd                   ; yes             ; User VHDL File  ; C:/Users/renat/Documents/Poli/exp9-relogio/assets/jogador.vhd                   ;         ;
+; assets/binary_counter.vhd            ; yes             ; User VHDL File  ; C:/Users/renat/Documents/Poli/exp9-relogio/assets/binary_counter.vhd            ;         ;
+; unidadeDeControle.vhd                ; yes             ; User VHDL File  ; C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd                ;         ;
+; fluxoDeDados.vhd                     ; yes             ; User VHDL File  ; C:/Users/renat/Documents/Poli/exp9-relogio/fluxoDeDados.vhd                     ;         ;
++--------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                        ;
++---------------------------------------------+----------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                ;
++---------------------------------------------+----------------------------------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 236                                                                  ;
+;                                             ;                                                                      ;
+; Combinational ALUT usage for logic          ; 381                                                                  ;
+;     -- 7 input functions                    ; 2                                                                    ;
+;     -- 6 input functions                    ; 88                                                                   ;
+;     -- 5 input functions                    ; 93                                                                   ;
+;     -- 4 input functions                    ; 109                                                                  ;
+;     -- <=3 input functions                  ; 89                                                                   ;
+;                                             ;                                                                      ;
+; Dedicated logic registers                   ; 80                                                                   ;
+;                                             ;                                                                      ;
+; I/O pins                                    ; 51                                                                   ;
+;                                             ;                                                                      ;
+; Total DSP Blocks                            ; 0                                                                    ;
+;                                             ;                                                                      ;
+; Maximum fan-out node                        ; fluxoDeDados:dados|divisor100hz:div100|division_counter:decade|qi[0] ;
+; Maximum fan-out                             ; 54                                                                   ;
+; Total fan-out                               ; 2071                                                                 ;
+; Average fan-out                             ; 3.68                                                                 ;
++---------------------------------------------+----------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                      ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                     ; Entity Name       ; Library Name ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------+-------------------+--------------+
+; |unidadeDeControle                 ; 381 (116)           ; 80 (0)                    ; 0                 ; 0          ; 51   ; 0            ; |unidadeDeControle                                                                                      ; unidadeDeControle ; work         ;
+;    |fluxoDeDados:dados|            ; 237 (25)            ; 80 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados                                                                   ; fluxoDeDados      ; work         ;
+;       |divisor100hz:div100|        ; 48 (13)             ; 32 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|divisor100hz:div100                                               ; divisor100hz      ; work         ;
+;          |division_counter:b1|     ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|divisor100hz:div100|division_counter:b1                           ; division_counter  ; work         ;
+;          |division_counter:b2|     ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|divisor100hz:div100|division_counter:b2                           ; division_counter  ; work         ;
+;          |division_counter:b3|     ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|divisor100hz:div100|division_counter:b3                           ; division_counter  ; work         ;
+;          |division_counter:b4|     ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|divisor100hz:div100|division_counter:b4                           ; division_counter  ; work         ;
+;          |division_counter:b5|     ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|divisor100hz:div100|division_counter:b5                           ; division_counter  ; work         ;
+;          |division_counter:b6|     ; 6 (6)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|divisor100hz:div100|division_counter:b6                           ; division_counter  ; work         ;
+;          |division_counter:b7|     ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|divisor100hz:div100|division_counter:b7                           ; division_counter  ; work         ;
+;          |division_counter:decade| ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|divisor100hz:div100|division_counter:decade                       ; division_counter  ; work         ;
+;       |jogador:JOGADOR1|           ; 61 (7)              ; 24 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1                                                  ; jogador           ; work         ;
+;          |binary_counter:count_1|  ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_1                           ; binary_counter    ; work         ;
+;          |binary_counter:count_2|  ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_2                           ; binary_counter    ; work         ;
+;          |binary_counter:count_3|  ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_3                           ; binary_counter    ; work         ;
+;          |binary_counter:count_4|  ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_4                           ; binary_counter    ; work         ;
+;          |binary_counter:count_5|  ; 6 (6)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_5                           ; binary_counter    ; work         ;
+;          |binary_counter:count_6|  ; 6 (6)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_6                           ; binary_counter    ; work         ;
+;          |somadorBCD:fis_add1|     ; 8 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add1                              ; somadorBCD        ; work         ;
+;             |somador4b:BADD1|      ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add1|somador4b:BADD1              ; somador4b         ; work         ;
+;                |somador1b:s2|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add1|somador4b:BADD1|somador1b:s2 ; somador1b         ; work         ;
+;                |somador1b:s3|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add1|somador4b:BADD1|somador1b:s3 ; somador1b         ; work         ;
+;             |somador4b:BADD2|      ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add1|somador4b:BADD2              ; somador4b         ; work         ;
+;                |somador1b:s2|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add1|somador4b:BADD2|somador1b:s2 ; somador1b         ; work         ;
+;                |somador1b:s3|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add1|somador4b:BADD2|somador1b:s3 ; somador1b         ; work         ;
+;                |somador1b:s4|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add1|somador4b:BADD2|somador1b:s4 ; somador1b         ; work         ;
+;          |somadorBCD:fis_add2|     ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add2                              ; somadorBCD        ; work         ;
+;             |somador4b:BADD1|      ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add2|somador4b:BADD1              ; somador4b         ; work         ;
+;                |somador1b:s1|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add2|somador4b:BADD1|somador1b:s1 ; somador1b         ; work         ;
+;                |somador1b:s2|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add2|somador4b:BADD1|somador1b:s2 ; somador1b         ; work         ;
+;                |somador1b:s3|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add2|somador4b:BADD1|somador1b:s3 ; somador1b         ; work         ;
+;             |somador4b:BADD2|      ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add2|somador4b:BADD2              ; somador4b         ; work         ;
+;                |somador1b:s2|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add2|somador4b:BADD2|somador1b:s2 ; somador1b         ; work         ;
+;                |somador1b:s3|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add2|somador4b:BADD2|somador1b:s3 ; somador1b         ; work         ;
+;       |jogador:JOGADOR2|           ; 61 (7)              ; 24 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2                                                  ; jogador           ; work         ;
+;          |binary_counter:count_1|  ; 6 (6)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_1                           ; binary_counter    ; work         ;
+;          |binary_counter:count_2|  ; 8 (8)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_2                           ; binary_counter    ; work         ;
+;          |binary_counter:count_3|  ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_3                           ; binary_counter    ; work         ;
+;          |binary_counter:count_4|  ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_4                           ; binary_counter    ; work         ;
+;          |binary_counter:count_5|  ; 6 (6)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_5                           ; binary_counter    ; work         ;
+;          |binary_counter:count_6|  ; 6 (6)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_6                           ; binary_counter    ; work         ;
+;          |somadorBCD:fis_add1|     ; 8 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add1                              ; somadorBCD        ; work         ;
+;             |somador4b:BADD1|      ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add1|somador4b:BADD1              ; somador4b         ; work         ;
+;                |somador1b:s2|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add1|somador4b:BADD1|somador1b:s2 ; somador1b         ; work         ;
+;                |somador1b:s3|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add1|somador4b:BADD1|somador1b:s3 ; somador1b         ; work         ;
+;             |somador4b:BADD2|      ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add1|somador4b:BADD2              ; somador4b         ; work         ;
+;                |somador1b:s2|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add1|somador4b:BADD2|somador1b:s2 ; somador1b         ; work         ;
+;                |somador1b:s3|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add1|somador4b:BADD2|somador1b:s3 ; somador1b         ; work         ;
+;                |somador1b:s4|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add1|somador4b:BADD2|somador1b:s4 ; somador1b         ; work         ;
+;          |somadorBCD:fis_add2|     ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add2                              ; somadorBCD        ; work         ;
+;             |somador4b:BADD1|      ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add2|somador4b:BADD1              ; somador4b         ; work         ;
+;                |somador1b:s1|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add2|somador4b:BADD1|somador1b:s1 ; somador1b         ; work         ;
+;                |somador1b:s2|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add2|somador4b:BADD1|somador1b:s2 ; somador1b         ; work         ;
+;                |somador1b:s3|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add2|somador4b:BADD1|somador1b:s3 ; somador1b         ; work         ;
+;             |somador4b:BADD2|      ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add2|somador4b:BADD2              ; somador4b         ; work         ;
+;                |somador1b:s2|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add2|somador4b:BADD2|somador1b:s2 ; somador1b         ; work         ;
+;                |somador1b:s3|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add2|somador4b:BADD2|somador1b:s3 ; somador1b         ; work         ;
+;       |setesegmentos:disp1|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|setesegmentos:disp1                                               ; setesegmentos     ; work         ;
+;       |setesegmentos:disp2|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|setesegmentos:disp2                                               ; setesegmentos     ; work         ;
+;       |setesegmentos:disp3|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|setesegmentos:disp3                                               ; setesegmentos     ; work         ;
+;       |setesegmentos:disp4|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|setesegmentos:disp4                                               ; setesegmentos     ; work         ;
+;       |setesegmentos:disp5|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|setesegmentos:disp5                                               ; setesegmentos     ; work         ;
+;       |setesegmentos:disp6|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|fluxoDeDados:dados|setesegmentos:disp6                                               ; setesegmentos     ; work         ;
+;    |setesegmentos:conv1|           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|setesegmentos:conv1                                                                  ; setesegmentos     ; work         ;
+;    |setesegmentos:conv2|           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|setesegmentos:conv2                                                                  ; setesegmentos     ; work         ;
+;    |setesegmentos:conv3|           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|setesegmentos:conv3                                                                  ; setesegmentos     ; work         ;
+;    |setesegmentos:conv4|           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |unidadeDeControle|setesegmentos:conv4                                                                  ; setesegmentos     ; work         ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; estado_atual.OVER_1167                              ; Selector51          ; yes                    ;
+; estado_atual.GAME_PAUSE_1188                        ; Selector51          ; yes                    ;
+; seletor                                             ; Selector51          ; yes                    ;
+; estado_atual.JOGADOR1_1272                          ; Selector51          ; yes                    ;
+; preset                                              ; Selector51          ; yes                    ;
+; estado_atual.DELTA_1314                             ; Selector51          ; yes                    ;
+; estado_atual.MODO_1335                              ; Selector51          ; yes                    ;
+; estado_atual.TEMPO_1356                             ; Selector51          ; yes                    ;
+; delta1[0]                                           ; Selector9           ; yes                    ;
+; delta1[1]                                           ; Selector9           ; yes                    ;
+; delta1[2]                                           ; Selector9           ; yes                    ;
+; delta1[3]                                           ; Selector9           ; yes                    ;
+; modojogo[1]                                         ; modojogo[1]         ; yes                    ;
+; modojogo[0]                                         ; modojogo[1]         ; yes                    ;
+; preset1[0]                                          ; Selector30          ; yes                    ;
+; preset1[1]                                          ; Selector30          ; yes                    ;
+; preset1[2]                                          ; Selector30          ; yes                    ;
+; preset1[3]                                          ; Selector30          ; yes                    ;
+; preset2[0]                                          ; Selector2           ; yes                    ;
+; preset2[1]                                          ; Selector2           ; yes                    ;
+; preset2[2]                                          ; Selector2           ; yes                    ;
+; preset2[3]                                          ; Selector2           ; yes                    ;
+; delta2[0]                                           ; Selector20          ; yes                    ;
+; delta2[1]                                           ; Selector20          ; yes                    ;
+; delta2[2]                                           ; Selector20          ; yes                    ;
+; delta2[3]                                           ; Selector20          ; yes                    ;
+; prox_estado.OVER_926                                ; Selector47          ; yes                    ;
+; estado_atual.INICIO_1377                            ; Selector51          ; yes                    ;
+; prox_estado.GAME_PAUSE_948                          ; Selector47          ; yes                    ;
+; estado_atual.L_FISCHER2_1209                        ; Selector51          ; yes                    ;
+; estado_atual.L_FISCHER1_1230                        ; Selector51          ; yes                    ;
+; prox_estado.JOGADOR2_1014                           ; Selector47          ; yes                    ;
+; prox_estado.JOGADOR1_1036                           ; Selector47          ; yes                    ;
+; prox_estado.IDLE_1058                               ; Selector47          ; yes                    ;
+; prox_estado.DELTA_1080                              ; Selector47          ; yes                    ;
+; prox_estado.MODO_1102                               ; Selector47          ; yes                    ;
+; prox_estado.TEMPO_1124                              ; Selector47          ; yes                    ;
+; Number of user-specified and inferred latches = 37  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 80    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 80    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 48    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------+
+; Inverted Register Statistics                                               ;
++------------------------------------------------------------------+---------+
+; Inverted Register                                                ; Fan out ;
++------------------------------------------------------------------+---------+
+; fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_1|qi[0] ; 6       ;
+; fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_1|qi[0] ; 6       ;
+; fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_5|qi[0] ; 7       ;
+; fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_1|qi[3] ; 4       ;
+; fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_1|qi[3] ; 4       ;
+; fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_5|qi[3] ; 5       ;
+; fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_2|qi[0] ; 6       ;
+; fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_2|qi[0] ; 6       ;
+; fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_6|qi[0] ; 7       ;
+; fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_2|qi[3] ; 4       ;
+; fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_2|qi[3] ; 4       ;
+; fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_6|qi[3] ; 5       ;
+; fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_3|qi[0] ; 10      ;
+; fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_3|qi[0] ; 10      ;
+; fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_3|qi[3] ; 9       ;
+; fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_3|qi[3] ; 9       ;
+; fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_4|qi[0] ; 7       ;
+; fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_4|qi[0] ; 7       ;
+; fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_4|qi[3] ; 6       ;
+; fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_4|qi[3] ; 6       ;
+; fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_5|qi[0] ; 6       ;
+; fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_5|qi[3] ; 4       ;
+; fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_6|qi[0] ; 6       ;
+; fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_6|qi[3] ; 4       ;
+; Total number of inverted registers = 24                          ;         ;
++------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_1|qi[0] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_2|qi[1] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_1|qi[0] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_2|qi[2] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_3|qi[3] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_4|qi[3] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_5|qi[2] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_6|qi[1] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_3|qi[2] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_4|qi[1] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_5|qi[1] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_6|qi[3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |unidadeDeControle|fluxoDeDados:dados|d3[0]                                         ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |unidadeDeControle|fluxoDeDados:dados|d5[3]                                         ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |unidadeDeControle|fluxoDeDados:dados|d1[3]                                         ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |unidadeDeControle|Selector22                                                       ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |unidadeDeControle|Selector19                                                       ;
+; 7:1                ; 5 bits    ; 20 LEs        ; 15 LEs               ; 5 LEs                  ; No         ; |unidadeDeControle|Selector60                                                       ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |unidadeDeControle|Selector55                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "setesegmentos:conv5" ;
++---------------+-------+----------+--------------+
+; Port          ; Type  ; Severity ; Details      ;
++---------------+-------+----------+--------------+
+; entrada[3..2] ; Input ; Info     ; Stuck at GND ;
++---------------+-------+----------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add4"                               ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; bbcd    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; coutbcd ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add3" ;
++------+-------+----------+-----------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                   ;
++------+-------+----------+-----------------------------------------------------------+
+; bbcd ; Input ; Info     ; Stuck at GND                                              ;
++------+-------+----------+-----------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add1|somador4b:BADD2" ;
++------+-------+----------+---------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                   ;
++------+-------+----------+---------------------------------------------------------------------------+
+; a[3] ; Input ; Info     ; Stuck at GND                                                              ;
+; a[0] ; Input ; Info     ; Stuck at GND                                                              ;
+; cin  ; Input ; Info     ; Stuck at GND                                                              ;
++------+-------+----------+---------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add1" ;
++--------+-------+----------+---------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                 ;
++--------+-------+----------+---------------------------------------------------------+
+; cinbcd ; Input ; Info     ; Stuck at GND                                            ;
++--------+-------+----------+---------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_6"                            ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; sentido ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; decade  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; rco     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_5" ;
++---------+-------+----------+-----------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                   ;
++---------+-------+----------+-----------------------------------------------------------+
+; sentido ; Input ; Info     ; Stuck at VCC                                              ;
+; decade  ; Input ; Info     ; Stuck at VCC                                              ;
++---------+-------+----------+-----------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_4" ;
++---------+-------+----------+-----------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                   ;
++---------+-------+----------+-----------------------------------------------------------+
+; sentido ; Input ; Info     ; Stuck at VCC                                              ;
+; decade  ; Input ; Info     ; Stuck at VCC                                              ;
++---------+-------+----------+-----------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_3" ;
++---------+-------+----------+-----------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                   ;
++---------+-------+----------+-----------------------------------------------------------+
+; sentido ; Input ; Info     ; Stuck at VCC                                              ;
+; decade  ; Input ; Info     ; Stuck at VCC                                              ;
++---------+-------+----------+-----------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_2" ;
++---------+-------+----------+-----------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                   ;
++---------+-------+----------+-----------------------------------------------------------+
+; sentido ; Input ; Info     ; Stuck at VCC                                              ;
+; decade  ; Input ; Info     ; Stuck at VCC                                              ;
++---------+-------+----------+-----------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_1" ;
++---------+-------+----------+-----------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                   ;
++---------+-------+----------+-----------------------------------------------------------+
+; sentido ; Input ; Info     ; Stuck at VCC                                              ;
+; decade  ; Input ; Info     ; Stuck at VCC                                              ;
++---------+-------+----------+-----------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxoDeDados:dados|divisor100hz:div100|division_counter:decade"                        ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; clear   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; load    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; decade  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; l       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; q[3..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; rco     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxoDeDados:dados|divisor100hz:div100|division_counter:b7"                           ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; load   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; decade ; Input  ; Info     ; Stuck at GND                                                                        ;
+; l      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; rco    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxoDeDados:dados|divisor100hz:div100|division_counter:b6" ;
++--------+-------+----------+------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                    ;
++--------+-------+----------+------------------------------------------------------------+
+; load   ; Input ; Info     ; Stuck at GND                                               ;
+; decade ; Input ; Info     ; Stuck at GND                                               ;
+; l      ; Input ; Info     ; Stuck at GND                                               ;
++--------+-------+----------+------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxoDeDados:dados|divisor100hz:div100|division_counter:b5" ;
++--------+-------+----------+------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                    ;
++--------+-------+----------+------------------------------------------------------------+
+; load   ; Input ; Info     ; Stuck at GND                                               ;
+; decade ; Input ; Info     ; Stuck at GND                                               ;
+; l      ; Input ; Info     ; Stuck at GND                                               ;
++--------+-------+----------+------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxoDeDados:dados|divisor100hz:div100|division_counter:b4" ;
++--------+-------+----------+------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                    ;
++--------+-------+----------+------------------------------------------------------------+
+; load   ; Input ; Info     ; Stuck at GND                                               ;
+; decade ; Input ; Info     ; Stuck at GND                                               ;
+; l      ; Input ; Info     ; Stuck at GND                                               ;
++--------+-------+----------+------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxoDeDados:dados|divisor100hz:div100|division_counter:b3" ;
++--------+-------+----------+------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                    ;
++--------+-------+----------+------------------------------------------------------------+
+; load   ; Input ; Info     ; Stuck at GND                                               ;
+; decade ; Input ; Info     ; Stuck at GND                                               ;
+; l      ; Input ; Info     ; Stuck at GND                                               ;
++--------+-------+----------+------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxoDeDados:dados|divisor100hz:div100|division_counter:b2" ;
++--------+-------+----------+------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                    ;
++--------+-------+----------+------------------------------------------------------------+
+; load   ; Input ; Info     ; Stuck at GND                                               ;
+; decade ; Input ; Info     ; Stuck at GND                                               ;
+; l      ; Input ; Info     ; Stuck at GND                                               ;
++--------+-------+----------+------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxoDeDados:dados|divisor100hz:div100|division_counter:b1" ;
++--------+-------+----------+------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                    ;
++--------+-------+----------+------------------------------------------------------------+
+; load   ; Input ; Info     ; Stuck at GND                                               ;
+; enable ; Input ; Info     ; Stuck at VCC                                               ;
+; decade ; Input ; Info     ; Stuck at GND                                               ;
+; l      ; Input ; Info     ; Stuck at GND                                               ;
++--------+-------+----------+------------------------------------------------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "fluxoDeDados:dados" ;
++------+-------+----------+----------------------+
+; Port ; Type  ; Severity ; Details              ;
++------+-------+----------+----------------------+
+; bron ; Input ; Info     ; Stuck at GND         ;
++------+-------+----------+----------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 80                          ;
+;     CLR               ; 32                          ;
+;     ENA CLR           ; 48                          ;
+; arriav_lcell_comb     ; 382                         ;
+;     extend            ; 2                           ;
+;         7 data inputs ; 2                           ;
+;     normal            ; 380                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 19                          ;
+;         3 data inputs ; 69                          ;
+;         4 data inputs ; 109                         ;
+;         5 data inputs ; 93                          ;
+;         6 data inputs ; 88                          ;
+; boundary_port         ; 51                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 2.68                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Sun Jun 03 02:08:27 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RelogioXadrez -c toplevel
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file somadores/somadorbcd.vhd
+    Info (12022): Found design unit 1: somadorBCD-comportamental File: C:/Users/renat/Documents/Poli/exp9-relogio/somadores/somadorBCD.vhd Line: 16
+    Info (12023): Found entity 1: somadorBCD File: C:/Users/renat/Documents/Poli/exp9-relogio/somadores/somadorBCD.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file somadores/somador4b.vhd
+    Info (12022): Found design unit 1: somador4b-comportamental File: C:/Users/renat/Documents/Poli/exp9-relogio/somadores/somador4b.vhd Line: 13
+    Info (12023): Found entity 1: somador4b File: C:/Users/renat/Documents/Poli/exp9-relogio/somadores/somador4b.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file somadores/somador1b.vhd
+    Info (12022): Found design unit 1: somador1b-comportamental File: C:/Users/renat/Documents/Poli/exp9-relogio/somadores/somador1b.vhd Line: 11
+    Info (12023): Found entity 1: somador1b File: C:/Users/renat/Documents/Poli/exp9-relogio/somadores/somador1b.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file divisores-clock/divisor100hz.vhd
+    Info (12022): Found design unit 1: divisor100hz-comportamental File: C:/Users/renat/Documents/Poli/exp9-relogio/divisores-clock/divisor100hz.vhd Line: 12
+    Info (12023): Found entity 1: divisor100hz File: C:/Users/renat/Documents/Poli/exp9-relogio/divisores-clock/divisor100hz.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file divisores-clock/divisor1hz.vhd
+    Info (12022): Found design unit 1: divisor1hz-comportamental File: C:/Users/renat/Documents/Poli/exp9-relogio/divisores-clock/divisor1hz.vhd Line: 12
+    Info (12023): Found entity 1: divisor1hz File: C:/Users/renat/Documents/Poli/exp9-relogio/divisores-clock/divisor1hz.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file divisores-clock/divisor_9600.vhd
+    Info (12022): Found design unit 1: divisor_9600-comportamental File: C:/Users/renat/Documents/Poli/exp9-relogio/divisores-clock/divisor_9600.vhd Line: 13
+    Info (12023): Found entity 1: divisor_9600 File: C:/Users/renat/Documents/Poli/exp9-relogio/divisores-clock/divisor_9600.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file divisores-clock/division_counter.vhd
+    Info (12022): Found design unit 1: division_counter-counter File: C:/Users/renat/Documents/Poli/exp9-relogio/divisores-clock/division_counter.vhd Line: 18
+    Info (12023): Found entity 1: division_counter File: C:/Users/renat/Documents/Poli/exp9-relogio/divisores-clock/division_counter.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file assets/setesegmentos.vhd
+    Info (12022): Found design unit 1: setesegmentos-combinatorio File: C:/Users/renat/Documents/Poli/exp9-relogio/assets/setesegmentos.vhd Line: 17
+    Info (12023): Found entity 1: setesegmentos File: C:/Users/renat/Documents/Poli/exp9-relogio/assets/setesegmentos.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file assets/jogador.vhd
+    Info (12022): Found design unit 1: jogador-comportamental File: C:/Users/renat/Documents/Poli/exp9-relogio/assets/jogador.vhd Line: 32
+    Info (12023): Found entity 1: jogador File: C:/Users/renat/Documents/Poli/exp9-relogio/assets/jogador.vhd Line: 12
+Info (12021): Found 2 design units, including 1 entities, in source file assets/binary_counter.vhd
+    Info (12022): Found design unit 1: binary_counter-counter File: C:/Users/renat/Documents/Poli/exp9-relogio/assets/binary_counter.vhd Line: 22
+    Info (12023): Found entity 1: binary_counter File: C:/Users/renat/Documents/Poli/exp9-relogio/assets/binary_counter.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file assets/ascii_counter.vhd
+    Info (12022): Found design unit 1: ascii_counter-comportamental File: C:/Users/renat/Documents/Poli/exp9-relogio/assets/ascii_counter.vhd Line: 15
+    Info (12023): Found entity 1: ascii_counter File: C:/Users/renat/Documents/Poli/exp9-relogio/assets/ascii_counter.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file unidadedecontrole.vhd
+    Info (12022): Found design unit 1: unidadeDeControle-comportamental File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 33
+    Info (12023): Found entity 1: unidadeDeControle File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file fluxodedados.vhd
+    Info (12022): Found design unit 1: fluxoDeDados-comportamental File: C:/Users/renat/Documents/Poli/exp9-relogio/fluxoDeDados.vhd Line: 40
+    Info (12023): Found entity 1: fluxoDeDados File: C:/Users/renat/Documents/Poli/exp9-relogio/fluxoDeDados.vhd Line: 10
+Info (12127): Elaborating entity "unidadeDeControle" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at unidadeDeControle.vhd(28): used implicit default value for signal "led1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 28
+Warning (10541): VHDL Signal Declaration warning at unidadeDeControle.vhd(28): used implicit default value for signal "led2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 28
+Warning (10540): VHDL Signal Declaration warning at unidadeDeControle.vhd(87): used explicit default value for signal "bron" because signal was never assigned a value File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 87
+Warning (10492): VHDL Process Statement warning at unidadeDeControle.vhd(126): signal "prox_estado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 126
+Warning (10492): VHDL Process Statement warning at unidadeDeControle.vhd(134): signal "estado_atual" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 134
+Warning (10492): VHDL Process Statement warning at unidadeDeControle.vhd(149): signal "preset1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 149
+Warning (10492): VHDL Process Statement warning at unidadeDeControle.vhd(150): signal "preset1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 150
+Warning (10492): VHDL Process Statement warning at unidadeDeControle.vhd(152): signal "preset2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 152
+Warning (10492): VHDL Process Statement warning at unidadeDeControle.vhd(155): signal "preset1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 155
+Warning (10492): VHDL Process Statement warning at unidadeDeControle.vhd(157): signal "preset2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 157
+Warning (10492): VHDL Process Statement warning at unidadeDeControle.vhd(159): signal "preset1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 159
+Warning (10492): VHDL Process Statement warning at unidadeDeControle.vhd(168): signal "modojogo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 168
+Warning (10492): VHDL Process Statement warning at unidadeDeControle.vhd(169): signal "modojogo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 169
+Warning (10492): VHDL Process Statement warning at unidadeDeControle.vhd(173): signal "modojogo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 173
+Warning (10492): VHDL Process Statement warning at unidadeDeControle.vhd(174): signal "modojogo" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 174
+Warning (10492): VHDL Process Statement warning at unidadeDeControle.vhd(184): signal "delta1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 184
+Warning (10492): VHDL Process Statement warning at unidadeDeControle.vhd(185): signal "delta1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 185
+Warning (10492): VHDL Process Statement warning at unidadeDeControle.vhd(187): signal "delta2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 187
+Warning (10492): VHDL Process Statement warning at unidadeDeControle.vhd(190): signal "delta1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 190
+Warning (10492): VHDL Process Statement warning at unidadeDeControle.vhd(192): signal "delta2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 192
+Warning (10492): VHDL Process Statement warning at unidadeDeControle.vhd(194): signal "delta1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 194
+Warning (10492): VHDL Process Statement warning at unidadeDeControle.vhd(234): signal "seletor" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 234
+Warning (10492): VHDL Process Statement warning at unidadeDeControle.vhd(236): signal "seletor" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 236
+Warning (10631): VHDL Process Statement warning at unidadeDeControle.vhd(123): inferring latch(es) for signal or variable "estado_atual", which holds its previous value in one or more paths through the process File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Warning (10631): VHDL Process Statement warning at unidadeDeControle.vhd(123): inferring latch(es) for signal or variable "prox_estado", which holds its previous value in one or more paths through the process File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Warning (10631): VHDL Process Statement warning at unidadeDeControle.vhd(123): inferring latch(es) for signal or variable "preset1", which holds its previous value in one or more paths through the process File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Warning (10631): VHDL Process Statement warning at unidadeDeControle.vhd(123): inferring latch(es) for signal or variable "preset2", which holds its previous value in one or more paths through the process File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Warning (10631): VHDL Process Statement warning at unidadeDeControle.vhd(123): inferring latch(es) for signal or variable "delta1", which holds its previous value in one or more paths through the process File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Warning (10631): VHDL Process Statement warning at unidadeDeControle.vhd(123): inferring latch(es) for signal or variable "delta2", which holds its previous value in one or more paths through the process File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Warning (10631): VHDL Process Statement warning at unidadeDeControle.vhd(123): inferring latch(es) for signal or variable "modojogo", which holds its previous value in one or more paths through the process File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "modojogo[0]" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "modojogo[1]" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "delta2[0]" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "delta2[1]" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "delta2[2]" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "delta2[3]" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "delta1[0]" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "delta1[1]" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "delta1[2]" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "delta1[3]" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "preset2[0]" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "preset2[1]" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "preset2[2]" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "preset2[3]" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "preset1[0]" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "preset1[1]" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "preset1[2]" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "preset1[3]" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "prox_estado.OVER" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "prox_estado.GAME_PAUSE" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "prox_estado.L_FISCHER2" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "prox_estado.L_FISCHER1" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "prox_estado.JOGADOR2" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "prox_estado.JOGADOR1" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "prox_estado.IDLE" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "prox_estado.DELTA" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "prox_estado.MODO" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "prox_estado.TEMPO" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "prox_estado.INICIO" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "estado_atual.OVER" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "estado_atual.GAME_PAUSE" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "estado_atual.L_FISCHER2" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "estado_atual.L_FISCHER1" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "estado_atual.JOGADOR2" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "estado_atual.JOGADOR1" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "estado_atual.IDLE" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "estado_atual.DELTA" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "estado_atual.MODO" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "estado_atual.TEMPO" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (10041): Inferred latch for "estado_atual.INICIO" at unidadeDeControle.vhd(123) File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Info (12128): Elaborating entity "fluxoDeDados" for hierarchy "fluxoDeDados:dados" File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 102
+Warning (10540): VHDL Signal Declaration warning at fluxoDeDados.vhd(113): used explicit default value for signal "enableJ1" because signal was never assigned a value File: C:/Users/renat/Documents/Poli/exp9-relogio/fluxoDeDados.vhd Line: 113
+Warning (10540): VHDL Signal Declaration warning at fluxoDeDados.vhd(117): used explicit default value for signal "enableJ2" because signal was never assigned a value File: C:/Users/renat/Documents/Poli/exp9-relogio/fluxoDeDados.vhd Line: 117
+Info (12128): Elaborating entity "divisor100hz" for hierarchy "fluxoDeDados:dados|divisor100hz:div100" File: C:/Users/renat/Documents/Poli/exp9-relogio/fluxoDeDados.vhd Line: 125
+Warning (10036): Verilog HDL or VHDL warning at divisor100hz.vhd(29): object "rco_7" assigned a value but never read File: C:/Users/renat/Documents/Poli/exp9-relogio/divisores-clock/divisor100hz.vhd Line: 29
+Warning (10540): VHDL Signal Declaration warning at divisor100hz.vhd(30): used explicit default value for signal "rst_d" because signal was never assigned a value File: C:/Users/renat/Documents/Poli/exp9-relogio/divisores-clock/divisor100hz.vhd Line: 30
+Info (12128): Elaborating entity "division_counter" for hierarchy "fluxoDeDados:dados|divisor100hz:div100|division_counter:b1" File: C:/Users/renat/Documents/Poli/exp9-relogio/divisores-clock/divisor100hz.vhd Line: 35
+Warning (10492): VHDL Process Statement warning at division_counter.vhd(24): signal "decade" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/divisores-clock/division_counter.vhd Line: 24
+Warning (10492): VHDL Process Statement warning at division_counter.vhd(24): signal "qi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/divisores-clock/division_counter.vhd Line: 24
+Warning (10492): VHDL Process Statement warning at division_counter.vhd(26): signal "load" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/divisores-clock/division_counter.vhd Line: 26
+Warning (10492): VHDL Process Statement warning at division_counter.vhd(28): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/divisores-clock/division_counter.vhd Line: 28
+Warning (10492): VHDL Process Statement warning at division_counter.vhd(32): signal "qi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/divisores-clock/division_counter.vhd Line: 32
+Warning (10492): VHDL Process Statement warning at division_counter.vhd(32): signal "decade" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/divisores-clock/division_counter.vhd Line: 32
+Info (12128): Elaborating entity "jogador" for hierarchy "fluxoDeDados:dados|jogador:JOGADOR1" File: C:/Users/renat/Documents/Poli/exp9-relogio/fluxoDeDados.vhd Line: 128
+Warning (10036): Verilog HDL or VHDL warning at jogador.vhd(60): object "rco6" assigned a value but never read File: C:/Users/renat/Documents/Poli/exp9-relogio/assets/jogador.vhd Line: 60
+Info (12128): Elaborating entity "binary_counter" for hierarchy "fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_1" File: C:/Users/renat/Documents/Poli/exp9-relogio/assets/jogador.vhd Line: 75
+Warning (10492): VHDL Process Statement warning at binary_counter.vhd(29): signal "decade" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/assets/binary_counter.vhd Line: 29
+Warning (10492): VHDL Process Statement warning at binary_counter.vhd(29): signal "qi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/assets/binary_counter.vhd Line: 29
+Warning (10492): VHDL Process Statement warning at binary_counter.vhd(29): signal "sentido" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/assets/binary_counter.vhd Line: 29
+Warning (10492): VHDL Process Statement warning at binary_counter.vhd(32): signal "sentido" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/assets/binary_counter.vhd Line: 32
+Warning (10492): VHDL Process Statement warning at binary_counter.vhd(33): signal "decade" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/assets/binary_counter.vhd Line: 33
+Warning (10492): VHDL Process Statement warning at binary_counter.vhd(39): signal "load" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/assets/binary_counter.vhd Line: 39
+Warning (10492): VHDL Process Statement warning at binary_counter.vhd(41): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/assets/binary_counter.vhd Line: 41
+Warning (10492): VHDL Process Statement warning at binary_counter.vhd(49): signal "decade" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/assets/binary_counter.vhd Line: 49
+Warning (10492): VHDL Process Statement warning at binary_counter.vhd(49): signal "qi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/assets/binary_counter.vhd Line: 49
+Warning (10492): VHDL Process Statement warning at binary_counter.vhd(57): signal "qi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/assets/binary_counter.vhd Line: 57
+Warning (10492): VHDL Process Statement warning at binary_counter.vhd(57): signal "decade" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/assets/binary_counter.vhd Line: 57
+Warning (10492): VHDL Process Statement warning at binary_counter.vhd(57): signal "sentido" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/assets/binary_counter.vhd Line: 57
+Warning (10492): VHDL Process Statement warning at binary_counter.vhd(57): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/assets/binary_counter.vhd Line: 57
+Warning (10492): VHDL Process Statement warning at binary_counter.vhd(60): signal "qi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/assets/binary_counter.vhd Line: 60
+Warning (10492): VHDL Process Statement warning at binary_counter.vhd(60): signal "sentido" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/assets/binary_counter.vhd Line: 60
+Warning (10492): VHDL Process Statement warning at binary_counter.vhd(60): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/renat/Documents/Poli/exp9-relogio/assets/binary_counter.vhd Line: 60
+Info (12128): Elaborating entity "somadorBCD" for hierarchy "fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add1" File: C:/Users/renat/Documents/Poli/exp9-relogio/assets/jogador.vhd Line: 200
+Info (12128): Elaborating entity "somador4b" for hierarchy "fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add1|somador4b:BADD1" File: C:/Users/renat/Documents/Poli/exp9-relogio/somadores/somadorBCD.vhd Line: 35
+Info (12128): Elaborating entity "somador1b" for hierarchy "fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add1|somador4b:BADD1|somador1b:s1" File: C:/Users/renat/Documents/Poli/exp9-relogio/somadores/somador4b.vhd Line: 25
+Info (12128): Elaborating entity "setesegmentos" for hierarchy "fluxoDeDados:dados|setesegmentos:disp1" File: C:/Users/renat/Documents/Poli/exp9-relogio/fluxoDeDados.vhd Line: 187
+Warning (13012): Latch estado_atual.OVER_1167 has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal seletor File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 86
+Warning (13012): Latch estado_atual.GAME_PAUSE_1188 has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal start File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 19
+Warning (13012): Latch seletor has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 86
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal esquerda File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 21
+Warning (13012): Latch estado_atual.JOGADOR1_1272 has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal seletor File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 86
+Warning (13012): Latch preset has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 85
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal start File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 19
+Warning (13012): Latch estado_atual.DELTA_1314 has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal start File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 19
+Warning (13012): Latch estado_atual.MODO_1335 has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal start File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 19
+Warning (13012): Latch estado_atual.TEMPO_1356 has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal start File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 19
+Warning (13012): Latch delta1[0] has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.DELTA_1314 File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Warning (13012): Latch delta1[1] has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.DELTA_1314 File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Warning (13012): Latch delta1[2] has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.DELTA_1314 File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Warning (13012): Latch delta1[3] has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.DELTA_1314 File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Warning (13012): Latch modojogo[1] has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal direita File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 20
+Warning (13012): Latch preset1[0] has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.TEMPO_1356 File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Warning (13012): Latch preset1[1] has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.TEMPO_1356 File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Warning (13012): Latch preset1[2] has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.TEMPO_1356 File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Warning (13012): Latch preset1[3] has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.TEMPO_1356 File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Warning (13012): Latch preset2[0] has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.TEMPO_1356 File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Warning (13012): Latch preset2[1] has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.TEMPO_1356 File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Warning (13012): Latch preset2[2] has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.TEMPO_1356 File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Warning (13012): Latch preset2[3] has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.TEMPO_1356 File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Warning (13012): Latch delta2[0] has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.DELTA_1314 File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Warning (13012): Latch delta2[1] has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.DELTA_1314 File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Warning (13012): Latch delta2[2] has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.DELTA_1314 File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Warning (13012): Latch delta2[3] has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.DELTA_1314 File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Warning (13012): Latch estado_atual.INICIO_1377 has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal seletor File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 86
+Warning (13012): Latch prox_estado.GAME_PAUSE_948 has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal seletor File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 86
+Warning (13012): Latch estado_atual.L_FISCHER2_1209 has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal seletor File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 86
+Warning (13012): Latch estado_atual.L_FISCHER1_1230 has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado_atual.JOGADOR1_1272 File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+Warning (13012): Latch prox_estado.JOGADOR2_1014 has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal seletor File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 86
+Warning (13012): Latch prox_estado.JOGADOR1_1036 has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal seletor File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 86
+Warning (13012): Latch prox_estado.TEMPO_1124 has unsafe behavior File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal seletor File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 86
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "led1" is stuck at GND File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 28
+    Warning (13410): Pin "led2" is stuck at GND File: C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd Line: 28
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 432 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 45 output pins
+    Info (21061): Implemented 381 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 125 warnings
+    Info: Peak virtual memory: 4876 megabytes
+    Info: Processing ended: Sun Jun 03 02:08:42 2018
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:28
+
+

@@ -1,0 +1,2982 @@
+|unidadeDeControle
+clock_out <= fluxoDeDados:dados.clock_out
+clock => fluxoDeDados:dados.clock
+reset => fluxoDeDados:dados.clear
+reset => prox_estado.OVER.IN0
+reset => estado_atual.OVER.IN1
+reset => estado_atual.INICIO.DATAA
+reset => estado_atual.OVER.DATAA
+start => estado_atual.OVER.OUTPUTSELECT
+start => estado_atual.OVER.IN1
+start => estado_atual.GAME_PAUSE.OUTPUTSELECT
+start => estado_atual.JOGADOR2.OUTPUTSELECT
+start => estado_atual.JOGADOR1.OUTPUTSELECT
+start => estado_atual.IDLE.OUTPUTSELECT
+start => estado_atual.DELTA.OUTPUTSELECT
+start => estado_atual.MODO.OUTPUTSELECT
+start => estado_atual.TEMPO.OUTPUTSELECT
+start => estado_atual.INICIO.OUTPUTSELECT
+start => prox_estado.OVER.IN1
+direita => FSM.IN1
+direita => modojogo[0].OUTPUTSELECT
+direita => modojogo[1].OUTPUTSELECT
+direita => delta2[0].OUTPUTSELECT
+direita => delta2[1].OUTPUTSELECT
+direita => delta2[2].OUTPUTSELECT
+direita => delta2[3].OUTPUTSELECT
+direita => delta2[3].OUTPUTSELECT
+direita => delta1[0].OUTPUTSELECT
+direita => delta1[1].OUTPUTSELECT
+direita => delta1[2].OUTPUTSELECT
+direita => delta1[3].OUTPUTSELECT
+direita => delta1[3].IN0
+direita => preset2[0].OUTPUTSELECT
+direita => preset2[1].OUTPUTSELECT
+direita => preset2[1].OUTPUTSELECT
+direita => preset2[2].OUTPUTSELECT
+direita => preset2[3].OUTPUTSELECT
+direita => preset1[0].OUTPUTSELECT
+direita => preset1[1].OUTPUTSELECT
+direita => preset1[2].OUTPUTSELECT
+direita => preset1[3].OUTPUTSELECT
+direita => prox_estado.OVER.OUTPUTSELECT
+direita => prox_estado.GAME_PAUSE.OUTPUTSELECT
+direita => prox_estado.TEMPO.OUTPUTSELECT
+direita => estado_atual.OVER.OUTPUTSELECT
+direita => estado_atual.OVER.IN1
+direita => estado_atual.OVER.OUTPUTSELECT
+direita => estado_atual.OVER.IN1
+direita => estado_atual.GAME_PAUSE.OUTPUTSELECT
+direita => estado_atual.GAME_PAUSE.OUTPUTSELECT
+direita => estado_atual.JOGADOR2.OUTPUTSELECT
+direita => estado_atual.JOGADOR2.OUTPUTSELECT
+direita => estado_atual.JOGADOR1.OUTPUTSELECT
+direita => estado_atual.JOGADOR1.OUTPUTSELECT
+direita => estado_atual.IDLE.OUTPUTSELECT
+direita => estado_atual.IDLE.OUTPUTSELECT
+direita => estado_atual.DELTA.OUTPUTSELECT
+direita => estado_atual.DELTA.OUTPUTSELECT
+direita => estado_atual.MODO.OUTPUTSELECT
+direita => estado_atual.MODO.OUTPUTSELECT
+direita => estado_atual.TEMPO.OUTPUTSELECT
+direita => estado_atual.TEMPO.OUTPUTSELECT
+direita => estado_atual.INICIO.OUTPUTSELECT
+direita => estado_atual.INICIO.OUTPUTSELECT
+direita => prox_estado.TEMPO.DATAA
+direita => prox_estado.OVER.IN1
+direita => prox_estado.GAME_PAUSE.DATAA
+direita => Selector54.IN0
+esquerda => FSM.IN1
+esquerda => delta2[3].IN1
+esquerda => delta1[3].IN1
+esquerda => preset2[1].IN1
+esquerda => prox_estado.OVER.OUTPUTSELECT
+esquerda => prox_estado.GAME_PAUSE.OUTPUTSELECT
+esquerda => prox_estado.TEMPO.OUTPUTSELECT
+esquerda => estado_atual.OVER.OUTPUTSELECT
+esquerda => estado_atual.OVER.IN1
+esquerda => estado_atual.OVER.OUTPUTSELECT
+esquerda => estado_atual.OVER.IN1
+esquerda => estado_atual.GAME_PAUSE.OUTPUTSELECT
+esquerda => estado_atual.GAME_PAUSE.OUTPUTSELECT
+esquerda => estado_atual.JOGADOR2.OUTPUTSELECT
+esquerda => estado_atual.JOGADOR2.OUTPUTSELECT
+esquerda => estado_atual.JOGADOR1.OUTPUTSELECT
+esquerda => estado_atual.JOGADOR1.OUTPUTSELECT
+esquerda => estado_atual.IDLE.OUTPUTSELECT
+esquerda => estado_atual.IDLE.OUTPUTSELECT
+esquerda => estado_atual.DELTA.OUTPUTSELECT
+esquerda => estado_atual.DELTA.OUTPUTSELECT
+esquerda => estado_atual.MODO.OUTPUTSELECT
+esquerda => estado_atual.MODO.OUTPUTSELECT
+esquerda => estado_atual.TEMPO.OUTPUTSELECT
+esquerda => estado_atual.TEMPO.OUTPUTSELECT
+esquerda => estado_atual.INICIO.OUTPUTSELECT
+esquerda => estado_atual.INICIO.OUTPUTSELECT
+esquerda => prox_estado.TEMPO.DATAA
+esquerda => prox_estado.OVER.IN1
+esquerda => prox_estado.GAME_PAUSE.DATAA
+esquerda => Selector53.IN1
+visual => fluxoDeDados:dados.modo
+d1[0] <= Selector19.DB_MAX_OUTPUT_PORT_TYPE
+d1[1] <= Selector18.DB_MAX_OUTPUT_PORT_TYPE
+d1[2] <= Selector17.DB_MAX_OUTPUT_PORT_TYPE
+d1[3] <= Selector16.DB_MAX_OUTPUT_PORT_TYPE
+d1[4] <= Selector15.DB_MAX_OUTPUT_PORT_TYPE
+d1[5] <= Selector14.DB_MAX_OUTPUT_PORT_TYPE
+d1[6] <= Selector13.DB_MAX_OUTPUT_PORT_TYPE
+d2[0] <= Selector27.DB_MAX_OUTPUT_PORT_TYPE
+d2[1] <= Selector26.DB_MAX_OUTPUT_PORT_TYPE
+d2[2] <= Selector25.DB_MAX_OUTPUT_PORT_TYPE
+d2[3] <= Selector24.DB_MAX_OUTPUT_PORT_TYPE
+d2[4] <= Selector23.DB_MAX_OUTPUT_PORT_TYPE
+d2[5] <= Selector22.DB_MAX_OUTPUT_PORT_TYPE
+d2[6] <= Selector21.DB_MAX_OUTPUT_PORT_TYPE
+d3[0] <= d3.DB_MAX_OUTPUT_PORT_TYPE
+d3[1] <= d3.DB_MAX_OUTPUT_PORT_TYPE
+d3[2] <= d3.DB_MAX_OUTPUT_PORT_TYPE
+d3[3] <= d3.DB_MAX_OUTPUT_PORT_TYPE
+d3[4] <= d3.DB_MAX_OUTPUT_PORT_TYPE
+d3[5] <= d3.DB_MAX_OUTPUT_PORT_TYPE
+d3[6] <= d3.DB_MAX_OUTPUT_PORT_TYPE
+d4[0] <= d4.DB_MAX_OUTPUT_PORT_TYPE
+d4[1] <= d4.DB_MAX_OUTPUT_PORT_TYPE
+d4[2] <= d4.DB_MAX_OUTPUT_PORT_TYPE
+d4[3] <= d4.DB_MAX_OUTPUT_PORT_TYPE
+d4[4] <= d4.DB_MAX_OUTPUT_PORT_TYPE
+d4[5] <= d4.DB_MAX_OUTPUT_PORT_TYPE
+d4[6] <= d4.DB_MAX_OUTPUT_PORT_TYPE
+d5[0] <= d5.DB_MAX_OUTPUT_PORT_TYPE
+d5[1] <= d5.DB_MAX_OUTPUT_PORT_TYPE
+d5[2] <= d5.DB_MAX_OUTPUT_PORT_TYPE
+d5[3] <= d5.DB_MAX_OUTPUT_PORT_TYPE
+d5[4] <= d5.DB_MAX_OUTPUT_PORT_TYPE
+d5[5] <= d5.DB_MAX_OUTPUT_PORT_TYPE
+d5[6] <= d5.DB_MAX_OUTPUT_PORT_TYPE
+d6[0] <= d6.DB_MAX_OUTPUT_PORT_TYPE
+d6[1] <= d6.DB_MAX_OUTPUT_PORT_TYPE
+d6[2] <= d6.DB_MAX_OUTPUT_PORT_TYPE
+d6[3] <= d6.DB_MAX_OUTPUT_PORT_TYPE
+d6[4] <= d6.DB_MAX_OUTPUT_PORT_TYPE
+d6[5] <= d6.DB_MAX_OUTPUT_PORT_TYPE
+d6[6] <= d6.DB_MAX_OUTPUT_PORT_TYPE
+led1 <= led1.DB_MAX_OUTPUT_PORT_TYPE
+led2 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados
+clock_out <= divisor100hz:div100.clk_out
+clock => divisor100hz:div100.clk
+enable => comb.IN0
+enable => comb.IN0
+clear => jogador:JOGADOR1.clear
+clear => jogador:JOGADOR2.clear
+preset => jogador:JOGADOR1.preset
+preset => jogador:JOGADOR2.preset
+seletor => comb.IN1
+seletor => comb.IN1
+modo => d1.IN1
+modo => d1.IN1
+modo => d2.IN1
+modo => d2.IN1
+modo => d3.IN1
+modo => d3.IN1
+modo => d4.IN1
+modo => d4.IN1
+modo => d5.IN1
+modo => d5.IN1
+modo => d6.IN1
+modo => d6.IN1
+modo => d1.OUTPUTSELECT
+modo => d1.OUTPUTSELECT
+modo => d1.OUTPUTSELECT
+modo => d1.OUTPUTSELECT
+modo => d2.OUTPUTSELECT
+modo => d2.OUTPUTSELECT
+modo => d2.OUTPUTSELECT
+modo => d2.OUTPUTSELECT
+modo => d5.OUTPUTSELECT
+modo => d5.OUTPUTSELECT
+modo => d5.OUTPUTSELECT
+modo => d5.OUTPUTSELECT
+modo => d6.OUTPUTSELECT
+modo => d6.OUTPUTSELECT
+modo => d6.OUTPUTSELECT
+modo => d6.OUTPUTSELECT
+fischer => jogador:JOGADOR1.fischer
+fischer => jogador:JOGADOR2.fischer
+bron => jogador:JOGADOR1.bron
+bron => jogador:JOGADOR2.bron
+delta1[0] => jogador:JOGADOR1.delta1[0]
+delta1[0] => jogador:JOGADOR2.delta1[0]
+delta1[1] => jogador:JOGADOR1.delta1[1]
+delta1[1] => jogador:JOGADOR2.delta1[1]
+delta1[2] => jogador:JOGADOR1.delta1[2]
+delta1[2] => jogador:JOGADOR2.delta1[2]
+delta1[3] => jogador:JOGADOR1.delta1[3]
+delta1[3] => jogador:JOGADOR2.delta1[3]
+delta2[0] => jogador:JOGADOR1.delta2[0]
+delta2[0] => jogador:JOGADOR2.delta2[0]
+delta2[1] => jogador:JOGADOR1.delta2[1]
+delta2[1] => jogador:JOGADOR2.delta2[1]
+delta2[2] => jogador:JOGADOR1.delta2[2]
+delta2[2] => jogador:JOGADOR2.delta2[2]
+delta2[3] => jogador:JOGADOR1.delta2[3]
+delta2[3] => jogador:JOGADOR2.delta2[3]
+preset1[0] => jogador:JOGADOR1.preset1[0]
+preset1[0] => jogador:JOGADOR2.preset1[0]
+preset1[1] => jogador:JOGADOR1.preset1[1]
+preset1[1] => jogador:JOGADOR2.preset1[1]
+preset1[2] => jogador:JOGADOR1.preset1[2]
+preset1[2] => jogador:JOGADOR2.preset1[2]
+preset1[3] => jogador:JOGADOR1.preset1[3]
+preset1[3] => jogador:JOGADOR2.preset1[3]
+preset2[0] => jogador:JOGADOR1.preset2[0]
+preset2[0] => jogador:JOGADOR2.preset2[0]
+preset2[1] => jogador:JOGADOR1.preset2[1]
+preset2[1] => jogador:JOGADOR2.preset2[1]
+preset2[2] => jogador:JOGADOR1.preset2[2]
+preset2[2] => jogador:JOGADOR2.preset2[2]
+preset2[3] => jogador:JOGADOR1.preset2[3]
+preset2[3] => jogador:JOGADOR2.preset2[3]
+d1_7[0] <= setesegmentos:disp1.saida[0]
+d1_7[1] <= setesegmentos:disp1.saida[1]
+d1_7[2] <= setesegmentos:disp1.saida[2]
+d1_7[3] <= setesegmentos:disp1.saida[3]
+d1_7[4] <= setesegmentos:disp1.saida[4]
+d1_7[5] <= setesegmentos:disp1.saida[5]
+d1_7[6] <= setesegmentos:disp1.saida[6]
+d2_7[0] <= setesegmentos:disp2.saida[0]
+d2_7[1] <= setesegmentos:disp2.saida[1]
+d2_7[2] <= setesegmentos:disp2.saida[2]
+d2_7[3] <= setesegmentos:disp2.saida[3]
+d2_7[4] <= setesegmentos:disp2.saida[4]
+d2_7[5] <= setesegmentos:disp2.saida[5]
+d2_7[6] <= setesegmentos:disp2.saida[6]
+d3_7[0] <= setesegmentos:disp3.saida[0]
+d3_7[1] <= setesegmentos:disp3.saida[1]
+d3_7[2] <= setesegmentos:disp3.saida[2]
+d3_7[3] <= setesegmentos:disp3.saida[3]
+d3_7[4] <= setesegmentos:disp3.saida[4]
+d3_7[5] <= setesegmentos:disp3.saida[5]
+d3_7[6] <= setesegmentos:disp3.saida[6]
+d4_7[0] <= setesegmentos:disp4.saida[0]
+d4_7[1] <= setesegmentos:disp4.saida[1]
+d4_7[2] <= setesegmentos:disp4.saida[2]
+d4_7[3] <= setesegmentos:disp4.saida[3]
+d4_7[4] <= setesegmentos:disp4.saida[4]
+d4_7[5] <= setesegmentos:disp4.saida[5]
+d4_7[6] <= setesegmentos:disp4.saida[6]
+d5_7[0] <= setesegmentos:disp5.saida[0]
+d5_7[1] <= setesegmentos:disp5.saida[1]
+d5_7[2] <= setesegmentos:disp5.saida[2]
+d5_7[3] <= setesegmentos:disp5.saida[3]
+d5_7[4] <= setesegmentos:disp5.saida[4]
+d5_7[5] <= setesegmentos:disp5.saida[5]
+d5_7[6] <= setesegmentos:disp5.saida[6]
+d6_7[0] <= setesegmentos:disp6.saida[0]
+d6_7[1] <= setesegmentos:disp6.saida[1]
+d6_7[2] <= setesegmentos:disp6.saida[2]
+d6_7[3] <= setesegmentos:disp6.saida[3]
+d6_7[4] <= setesegmentos:disp6.saida[4]
+d6_7[5] <= setesegmentos:disp6.saida[5]
+d6_7[6] <= setesegmentos:disp6.saida[6]
+fim <= fim.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|divisor100hz:div100
+clk => division_counter:b1.clock
+clk => division_counter:b2.clock
+clk => division_counter:b3.clock
+clk => division_counter:b4.clock
+clk => division_counter:b5.clock
+clk => division_counter:b6.clock
+clk => division_counter:b7.clock
+clk => division_counter:decade.clock
+clk_out <= division_counter:decade.q[0]
+
+
+|unidadeDeControle|fluxoDeDados:dados|divisor100hz:div100|division_counter:b1
+clock => qi[0].CLK
+clock => qi[1].CLK
+clock => qi[2].CLK
+clock => qi[3].CLK
+clear => process_0.IN1
+load => qi[0].OUTPUTSELECT
+load => qi[1].OUTPUTSELECT
+load => qi[2].OUTPUTSELECT
+load => qi[3].OUTPUTSELECT
+enable => qi[0].OUTPUTSELECT
+enable => qi[1].OUTPUTSELECT
+enable => qi[2].OUTPUTSELECT
+enable => qi[3].OUTPUTSELECT
+decade => process_0.IN1
+decade => process_0.IN1
+l[0] => qi[0].DATAB
+l[1] => qi[1].DATAB
+l[2] => qi[2].DATAB
+l[3] => qi[3].DATAB
+q[0] <= qi[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= qi[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= qi[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= qi[3].DB_MAX_OUTPUT_PORT_TYPE
+rco <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|divisor100hz:div100|division_counter:b2
+clock => qi[0].CLK
+clock => qi[1].CLK
+clock => qi[2].CLK
+clock => qi[3].CLK
+clear => process_0.IN1
+load => qi[0].OUTPUTSELECT
+load => qi[1].OUTPUTSELECT
+load => qi[2].OUTPUTSELECT
+load => qi[3].OUTPUTSELECT
+enable => qi[0].OUTPUTSELECT
+enable => qi[1].OUTPUTSELECT
+enable => qi[2].OUTPUTSELECT
+enable => qi[3].OUTPUTSELECT
+decade => process_0.IN1
+decade => process_0.IN1
+l[0] => qi[0].DATAB
+l[1] => qi[1].DATAB
+l[2] => qi[2].DATAB
+l[3] => qi[3].DATAB
+q[0] <= qi[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= qi[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= qi[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= qi[3].DB_MAX_OUTPUT_PORT_TYPE
+rco <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|divisor100hz:div100|division_counter:b3
+clock => qi[0].CLK
+clock => qi[1].CLK
+clock => qi[2].CLK
+clock => qi[3].CLK
+clear => process_0.IN1
+load => qi[0].OUTPUTSELECT
+load => qi[1].OUTPUTSELECT
+load => qi[2].OUTPUTSELECT
+load => qi[3].OUTPUTSELECT
+enable => qi[0].OUTPUTSELECT
+enable => qi[1].OUTPUTSELECT
+enable => qi[2].OUTPUTSELECT
+enable => qi[3].OUTPUTSELECT
+decade => process_0.IN1
+decade => process_0.IN1
+l[0] => qi[0].DATAB
+l[1] => qi[1].DATAB
+l[2] => qi[2].DATAB
+l[3] => qi[3].DATAB
+q[0] <= qi[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= qi[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= qi[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= qi[3].DB_MAX_OUTPUT_PORT_TYPE
+rco <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|divisor100hz:div100|division_counter:b4
+clock => qi[0].CLK
+clock => qi[1].CLK
+clock => qi[2].CLK
+clock => qi[3].CLK
+clear => process_0.IN1
+load => qi[0].OUTPUTSELECT
+load => qi[1].OUTPUTSELECT
+load => qi[2].OUTPUTSELECT
+load => qi[3].OUTPUTSELECT
+enable => qi[0].OUTPUTSELECT
+enable => qi[1].OUTPUTSELECT
+enable => qi[2].OUTPUTSELECT
+enable => qi[3].OUTPUTSELECT
+decade => process_0.IN1
+decade => process_0.IN1
+l[0] => qi[0].DATAB
+l[1] => qi[1].DATAB
+l[2] => qi[2].DATAB
+l[3] => qi[3].DATAB
+q[0] <= qi[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= qi[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= qi[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= qi[3].DB_MAX_OUTPUT_PORT_TYPE
+rco <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|divisor100hz:div100|division_counter:b5
+clock => qi[0].CLK
+clock => qi[1].CLK
+clock => qi[2].CLK
+clock => qi[3].CLK
+clear => process_0.IN1
+load => qi[0].OUTPUTSELECT
+load => qi[1].OUTPUTSELECT
+load => qi[2].OUTPUTSELECT
+load => qi[3].OUTPUTSELECT
+enable => qi[0].OUTPUTSELECT
+enable => qi[1].OUTPUTSELECT
+enable => qi[2].OUTPUTSELECT
+enable => qi[3].OUTPUTSELECT
+decade => process_0.IN1
+decade => process_0.IN1
+l[0] => qi[0].DATAB
+l[1] => qi[1].DATAB
+l[2] => qi[2].DATAB
+l[3] => qi[3].DATAB
+q[0] <= qi[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= qi[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= qi[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= qi[3].DB_MAX_OUTPUT_PORT_TYPE
+rco <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|divisor100hz:div100|division_counter:b6
+clock => qi[0].CLK
+clock => qi[1].CLK
+clock => qi[2].CLK
+clock => qi[3].CLK
+clear => process_0.IN1
+load => qi[0].OUTPUTSELECT
+load => qi[1].OUTPUTSELECT
+load => qi[2].OUTPUTSELECT
+load => qi[3].OUTPUTSELECT
+enable => qi[0].OUTPUTSELECT
+enable => qi[1].OUTPUTSELECT
+enable => qi[2].OUTPUTSELECT
+enable => qi[3].OUTPUTSELECT
+decade => process_0.IN1
+decade => process_0.IN1
+l[0] => qi[0].DATAB
+l[1] => qi[1].DATAB
+l[2] => qi[2].DATAB
+l[3] => qi[3].DATAB
+q[0] <= qi[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= qi[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= qi[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= qi[3].DB_MAX_OUTPUT_PORT_TYPE
+rco <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|divisor100hz:div100|division_counter:b7
+clock => qi[0].CLK
+clock => qi[1].CLK
+clock => qi[2].CLK
+clock => qi[3].CLK
+clear => process_0.IN1
+load => qi[0].OUTPUTSELECT
+load => qi[1].OUTPUTSELECT
+load => qi[2].OUTPUTSELECT
+load => qi[3].OUTPUTSELECT
+enable => qi[0].OUTPUTSELECT
+enable => qi[1].OUTPUTSELECT
+enable => qi[2].OUTPUTSELECT
+enable => qi[3].OUTPUTSELECT
+decade => process_0.IN1
+decade => process_0.IN1
+l[0] => qi[0].DATAB
+l[1] => qi[1].DATAB
+l[2] => qi[2].DATAB
+l[3] => qi[3].DATAB
+q[0] <= qi[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= qi[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= qi[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= qi[3].DB_MAX_OUTPUT_PORT_TYPE
+rco <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|divisor100hz:div100|division_counter:decade
+clock => qi[0].CLK
+clock => qi[1].CLK
+clock => qi[2].CLK
+clock => qi[3].CLK
+clear => process_0.IN1
+load => qi[0].OUTPUTSELECT
+load => qi[1].OUTPUTSELECT
+load => qi[2].OUTPUTSELECT
+load => qi[3].OUTPUTSELECT
+enable => qi[0].OUTPUTSELECT
+enable => qi[1].OUTPUTSELECT
+enable => qi[2].OUTPUTSELECT
+enable => qi[3].OUTPUTSELECT
+decade => process_0.IN1
+decade => process_0.IN1
+l[0] => qi[0].DATAB
+l[1] => qi[1].DATAB
+l[2] => qi[2].DATAB
+l[3] => qi[3].DATAB
+q[0] <= qi[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= qi[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= qi[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= qi[3].DB_MAX_OUTPUT_PORT_TYPE
+rco <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1
+clock => binary_counter:count_1.clock
+clock => binary_counter:count_2.clock
+clock => binary_counter:count_3.clock
+clock => binary_counter:count_4.clock
+clock => binary_counter:count_5.clock
+clock => binary_counter:count_6.clock
+enable => comb.IN1
+enable => comb.IN0
+enable => comb.IN1
+enable => comb.IN1
+enable => comb.IN1
+enable => comb.IN1
+enable => comb.IN1
+enable => comb.IN1
+enable => comb.IN1
+enable => comb.IN1
+enable => comb.IN1
+enable => comb.IN1
+clear => binary_counter:count_1.clear
+clear => binary_counter:count_2.clear
+clear => binary_counter:count_3.clear
+clear => binary_counter:count_4.clear
+clear => binary_counter:count_5.clear
+clear => binary_counter:count_6.clear
+preset => comb.IN1
+preset => comb.IN1
+preset => comb.IN1
+preset => comb.IN1
+preset => comb.IN1
+preset => comb.IN1
+preset => load1[3].OUTPUTSELECT
+preset => load1[2].OUTPUTSELECT
+preset => load1[1].OUTPUTSELECT
+preset => load1[0].OUTPUTSELECT
+preset => load2[3].OUTPUTSELECT
+preset => load2[2].OUTPUTSELECT
+preset => load2[1].OUTPUTSELECT
+preset => load2[0].OUTPUTSELECT
+preset => load3[3].OUTPUTSELECT
+preset => load3[2].OUTPUTSELECT
+preset => load3[1].OUTPUTSELECT
+preset => load3[0].OUTPUTSELECT
+preset => load4[3].OUTPUTSELECT
+preset => load4[2].OUTPUTSELECT
+preset => load4[1].OUTPUTSELECT
+preset => load4[0].OUTPUTSELECT
+preset => load5[3].OUTPUTSELECT
+preset => load5[2].OUTPUTSELECT
+preset => load5[1].OUTPUTSELECT
+preset => load5[0].OUTPUTSELECT
+preset => load6[3].OUTPUTSELECT
+preset => load6[2].OUTPUTSELECT
+preset => load6[1].OUTPUTSELECT
+preset => load6[0].OUTPUTSELECT
+fischer => comb.IN0
+fischer => comb.IN0
+fischer => comb.IN0
+fischer => comb.IN0
+fischer => comb.IN0
+fischer => comb.IN0
+fischer => load3.OUTPUTSELECT
+fischer => load3.OUTPUTSELECT
+fischer => load3.OUTPUTSELECT
+fischer => load3.OUTPUTSELECT
+fischer => load4.OUTPUTSELECT
+fischer => load4.OUTPUTSELECT
+fischer => load4.OUTPUTSELECT
+fischer => load4.OUTPUTSELECT
+fischer => load5.OUTPUTSELECT
+fischer => load5.OUTPUTSELECT
+fischer => load5.OUTPUTSELECT
+fischer => load5.OUTPUTSELECT
+fischer => load6.OUTPUTSELECT
+fischer => load6.OUTPUTSELECT
+fischer => load6.OUTPUTSELECT
+fischer => load6.OUTPUTSELECT
+fischer => comb.IN1
+fischer => comb.IN1
+fischer => comb.IN1
+fischer => comb.IN1
+fischer => comb.IN1
+fischer => comb.IN1
+bron => comb.IN1
+bron => comb.IN1
+bron => comb.IN1
+bron => comb.IN1
+bron => comb.IN1
+bron => comb.IN1
+bron => comb.IN1
+bron => comb.IN1
+bron => comb.IN1
+bron => comb.IN1
+bron => comb.IN1
+bron => comb.IN1
+delta1[0] => somadorBCD:fis_add1.bbcd[0]
+delta1[1] => somadorBCD:fis_add1.bbcd[1]
+delta1[2] => somadorBCD:fis_add1.bbcd[2]
+delta1[3] => somadorBCD:fis_add1.bbcd[3]
+delta2[0] => somadorBCD:fis_add2.bbcd[0]
+delta2[1] => somadorBCD:fis_add2.bbcd[1]
+delta2[2] => somadorBCD:fis_add2.bbcd[2]
+delta2[3] => somadorBCD:fis_add2.bbcd[3]
+preset1[0] => load5[0].DATAB
+preset1[1] => load5[1].DATAB
+preset1[2] => load5[2].DATAB
+preset1[3] => load5[3].DATAB
+preset2[0] => load6[0].DATAB
+preset2[1] => load6[1].DATAB
+preset2[2] => load6[2].DATAB
+preset2[3] => load6[3].DATAB
+q1[0] <= binary_counter:count_1.q[0]
+q1[1] <= binary_counter:count_1.q[1]
+q1[2] <= binary_counter:count_1.q[2]
+q1[3] <= binary_counter:count_1.q[3]
+q2[0] <= binary_counter:count_2.q[0]
+q2[1] <= binary_counter:count_2.q[1]
+q2[2] <= binary_counter:count_2.q[2]
+q2[3] <= binary_counter:count_2.q[3]
+q3[0] <= binary_counter:count_3.q[0]
+q3[1] <= binary_counter:count_3.q[1]
+q3[2] <= binary_counter:count_3.q[2]
+q3[3] <= binary_counter:count_3.q[3]
+q4[0] <= binary_counter:count_4.q[0]
+q4[1] <= binary_counter:count_4.q[1]
+q4[2] <= binary_counter:count_4.q[2]
+q4[3] <= binary_counter:count_4.q[3]
+q5[0] <= binary_counter:count_5.q[0]
+q5[1] <= binary_counter:count_5.q[1]
+q5[2] <= binary_counter:count_5.q[2]
+q5[3] <= binary_counter:count_5.q[3]
+q6[0] <= binary_counter:count_6.q[0]
+q6[1] <= binary_counter:count_6.q[1]
+q6[2] <= binary_counter:count_6.q[2]
+q6[3] <= binary_counter:count_6.q[3]
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_1
+clock => qi[0].CLK
+clock => qi[1].CLK
+clock => qi[2].CLK
+clock => qi[3].CLK
+clear => process_0.IN1
+clear => process_0.IN0
+load => qi[0].OUTPUTSELECT
+load => qi[1].OUTPUTSELECT
+load => qi[2].OUTPUTSELECT
+load => qi[3].OUTPUTSELECT
+enable => process_0.IN1
+enable => process_0.IN1
+enable => qi[0].OUTPUTSELECT
+enable => qi[1].OUTPUTSELECT
+enable => qi[2].OUTPUTSELECT
+enable => qi[3].OUTPUTSELECT
+sentido => process_0.IN1
+sentido => process_0.IN1
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => process_0.IN1
+sentido => process_0.IN1
+decade => process_0.IN1
+decade => process_0.IN1
+decade => process_0.IN1
+decade => qi[2].ADATA
+decade => qi[1].ADATA
+l[0] => qi[0].DATAB
+l[1] => qi[1].DATAB
+l[2] => qi[2].DATAB
+l[3] => qi[3].DATAB
+q[0] <= qi[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= qi[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= qi[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= qi[3].DB_MAX_OUTPUT_PORT_TYPE
+rco <= rco.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_2
+clock => qi[0].CLK
+clock => qi[1].CLK
+clock => qi[2].CLK
+clock => qi[3].CLK
+clear => process_0.IN1
+clear => process_0.IN0
+load => qi[0].OUTPUTSELECT
+load => qi[1].OUTPUTSELECT
+load => qi[2].OUTPUTSELECT
+load => qi[3].OUTPUTSELECT
+enable => process_0.IN1
+enable => process_0.IN1
+enable => qi[0].OUTPUTSELECT
+enable => qi[1].OUTPUTSELECT
+enable => qi[2].OUTPUTSELECT
+enable => qi[3].OUTPUTSELECT
+sentido => process_0.IN1
+sentido => process_0.IN1
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => process_0.IN1
+sentido => process_0.IN1
+decade => process_0.IN1
+decade => process_0.IN1
+decade => process_0.IN1
+decade => qi[2].ADATA
+decade => qi[1].ADATA
+l[0] => qi[0].DATAB
+l[1] => qi[1].DATAB
+l[2] => qi[2].DATAB
+l[3] => qi[3].DATAB
+q[0] <= qi[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= qi[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= qi[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= qi[3].DB_MAX_OUTPUT_PORT_TYPE
+rco <= rco.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_3
+clock => qi[0].CLK
+clock => qi[1].CLK
+clock => qi[2].CLK
+clock => qi[3].CLK
+clear => process_0.IN1
+clear => process_0.IN0
+load => qi[0].OUTPUTSELECT
+load => qi[1].OUTPUTSELECT
+load => qi[2].OUTPUTSELECT
+load => qi[3].OUTPUTSELECT
+enable => process_0.IN1
+enable => process_0.IN1
+enable => qi[0].OUTPUTSELECT
+enable => qi[1].OUTPUTSELECT
+enable => qi[2].OUTPUTSELECT
+enable => qi[3].OUTPUTSELECT
+sentido => process_0.IN1
+sentido => process_0.IN1
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => process_0.IN1
+sentido => process_0.IN1
+decade => process_0.IN1
+decade => process_0.IN1
+decade => process_0.IN1
+decade => qi[2].ADATA
+decade => qi[1].ADATA
+l[0] => qi[0].DATAB
+l[1] => qi[1].DATAB
+l[2] => qi[2].DATAB
+l[3] => qi[3].DATAB
+q[0] <= qi[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= qi[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= qi[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= qi[3].DB_MAX_OUTPUT_PORT_TYPE
+rco <= rco.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_4
+clock => qi[0].CLK
+clock => qi[1].CLK
+clock => qi[2].CLK
+clock => qi[3].CLK
+clear => process_0.IN1
+clear => process_0.IN0
+load => qi[0].OUTPUTSELECT
+load => qi[1].OUTPUTSELECT
+load => qi[2].OUTPUTSELECT
+load => qi[3].OUTPUTSELECT
+enable => process_0.IN1
+enable => process_0.IN1
+enable => qi[0].OUTPUTSELECT
+enable => qi[1].OUTPUTSELECT
+enable => qi[2].OUTPUTSELECT
+enable => qi[3].OUTPUTSELECT
+sentido => process_0.IN1
+sentido => process_0.IN1
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => process_0.IN1
+sentido => process_0.IN1
+decade => process_0.IN1
+decade => process_0.IN1
+decade => process_0.IN1
+decade => qi[2].ADATA
+decade => qi[1].ADATA
+l[0] => qi[0].DATAB
+l[1] => qi[1].DATAB
+l[2] => qi[2].DATAB
+l[3] => qi[3].DATAB
+q[0] <= qi[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= qi[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= qi[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= qi[3].DB_MAX_OUTPUT_PORT_TYPE
+rco <= rco.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_5
+clock => qi[0].CLK
+clock => qi[1].CLK
+clock => qi[2].CLK
+clock => qi[3].CLK
+clear => process_0.IN1
+clear => process_0.IN0
+load => qi[0].OUTPUTSELECT
+load => qi[1].OUTPUTSELECT
+load => qi[2].OUTPUTSELECT
+load => qi[3].OUTPUTSELECT
+enable => process_0.IN1
+enable => process_0.IN1
+enable => qi[0].OUTPUTSELECT
+enable => qi[1].OUTPUTSELECT
+enable => qi[2].OUTPUTSELECT
+enable => qi[3].OUTPUTSELECT
+sentido => process_0.IN1
+sentido => process_0.IN1
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => process_0.IN1
+sentido => process_0.IN1
+decade => process_0.IN1
+decade => process_0.IN1
+decade => process_0.IN1
+decade => qi[2].ADATA
+decade => qi[1].ADATA
+l[0] => qi[0].DATAB
+l[1] => qi[1].DATAB
+l[2] => qi[2].DATAB
+l[3] => qi[3].DATAB
+q[0] <= qi[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= qi[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= qi[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= qi[3].DB_MAX_OUTPUT_PORT_TYPE
+rco <= rco.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|binary_counter:count_6
+clock => qi[0].CLK
+clock => qi[1].CLK
+clock => qi[2].CLK
+clock => qi[3].CLK
+clear => process_0.IN1
+clear => process_0.IN0
+load => qi[0].OUTPUTSELECT
+load => qi[1].OUTPUTSELECT
+load => qi[2].OUTPUTSELECT
+load => qi[3].OUTPUTSELECT
+enable => process_0.IN1
+enable => process_0.IN1
+enable => qi[0].OUTPUTSELECT
+enable => qi[1].OUTPUTSELECT
+enable => qi[2].OUTPUTSELECT
+enable => qi[3].OUTPUTSELECT
+sentido => process_0.IN1
+sentido => process_0.IN1
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => process_0.IN1
+sentido => process_0.IN1
+decade => process_0.IN1
+decade => process_0.IN1
+decade => process_0.IN1
+decade => qi[2].ADATA
+decade => qi[1].ADATA
+l[0] => qi[0].DATAB
+l[1] => qi[1].DATAB
+l[2] => qi[2].DATAB
+l[3] => qi[3].DATAB
+q[0] <= qi[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= qi[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= qi[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= qi[3].DB_MAX_OUTPUT_PORT_TYPE
+rco <= rco.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add1
+abcd[0] => somador4b:BADD1.a[0]
+abcd[1] => somador4b:BADD1.a[1]
+abcd[2] => somador4b:BADD1.a[2]
+abcd[3] => somador4b:BADD1.a[3]
+bbcd[0] => somador4b:BADD1.b[0]
+bbcd[1] => somador4b:BADD1.b[1]
+bbcd[2] => somador4b:BADD1.b[2]
+bbcd[3] => somador4b:BADD1.b[3]
+cinbcd => somador4b:BADD1.cin
+coutbcd <= somador4b:BADD2.cout
+s[0] <= somador4b:BADD2.soma[0]
+s[1] <= somador4b:BADD2.soma[1]
+s[2] <= somador4b:BADD2.soma[2]
+s[3] <= somador4b:BADD2.soma[3]
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add1|somador4b:BADD1
+a[0] => somador1b:s1.x
+a[1] => somador1b:s2.x
+a[2] => somador1b:s3.x
+a[3] => somador1b:s4.x
+b[0] => somador1b:s1.y
+b[1] => somador1b:s2.y
+b[2] => somador1b:s3.y
+b[3] => somador1b:s4.y
+cin => somador1b:s1.cin
+cout <= somador1b:s4.cout
+soma[0] <= somador1b:s1.s
+soma[1] <= somador1b:s2.s
+soma[2] <= somador1b:s3.s
+soma[3] <= somador1b:s4.s
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add1|somador4b:BADD1|somador1b:s1
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add1|somador4b:BADD1|somador1b:s2
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add1|somador4b:BADD1|somador1b:s3
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add1|somador4b:BADD1|somador1b:s4
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add1|somador4b:BADD2
+a[0] => somador1b:s1.x
+a[1] => somador1b:s2.x
+a[2] => somador1b:s3.x
+a[3] => somador1b:s4.x
+b[0] => somador1b:s1.y
+b[1] => somador1b:s2.y
+b[2] => somador1b:s3.y
+b[3] => somador1b:s4.y
+cin => somador1b:s1.cin
+cout <= somador1b:s4.cout
+soma[0] <= somador1b:s1.s
+soma[1] <= somador1b:s2.s
+soma[2] <= somador1b:s3.s
+soma[3] <= somador1b:s4.s
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add1|somador4b:BADD2|somador1b:s1
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add1|somador4b:BADD2|somador1b:s2
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add1|somador4b:BADD2|somador1b:s3
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add1|somador4b:BADD2|somador1b:s4
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add2
+abcd[0] => somador4b:BADD1.a[0]
+abcd[1] => somador4b:BADD1.a[1]
+abcd[2] => somador4b:BADD1.a[2]
+abcd[3] => somador4b:BADD1.a[3]
+bbcd[0] => somador4b:BADD1.b[0]
+bbcd[1] => somador4b:BADD1.b[1]
+bbcd[2] => somador4b:BADD1.b[2]
+bbcd[3] => somador4b:BADD1.b[3]
+cinbcd => somador4b:BADD1.cin
+coutbcd <= somador4b:BADD2.cout
+s[0] <= somador4b:BADD2.soma[0]
+s[1] <= somador4b:BADD2.soma[1]
+s[2] <= somador4b:BADD2.soma[2]
+s[3] <= somador4b:BADD2.soma[3]
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add2|somador4b:BADD1
+a[0] => somador1b:s1.x
+a[1] => somador1b:s2.x
+a[2] => somador1b:s3.x
+a[3] => somador1b:s4.x
+b[0] => somador1b:s1.y
+b[1] => somador1b:s2.y
+b[2] => somador1b:s3.y
+b[3] => somador1b:s4.y
+cin => somador1b:s1.cin
+cout <= somador1b:s4.cout
+soma[0] <= somador1b:s1.s
+soma[1] <= somador1b:s2.s
+soma[2] <= somador1b:s3.s
+soma[3] <= somador1b:s4.s
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add2|somador4b:BADD1|somador1b:s1
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add2|somador4b:BADD1|somador1b:s2
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add2|somador4b:BADD1|somador1b:s3
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add2|somador4b:BADD1|somador1b:s4
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add2|somador4b:BADD2
+a[0] => somador1b:s1.x
+a[1] => somador1b:s2.x
+a[2] => somador1b:s3.x
+a[3] => somador1b:s4.x
+b[0] => somador1b:s1.y
+b[1] => somador1b:s2.y
+b[2] => somador1b:s3.y
+b[3] => somador1b:s4.y
+cin => somador1b:s1.cin
+cout <= somador1b:s4.cout
+soma[0] <= somador1b:s1.s
+soma[1] <= somador1b:s2.s
+soma[2] <= somador1b:s3.s
+soma[3] <= somador1b:s4.s
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add2|somador4b:BADD2|somador1b:s1
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add2|somador4b:BADD2|somador1b:s2
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add2|somador4b:BADD2|somador1b:s3
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add2|somador4b:BADD2|somador1b:s4
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add3
+abcd[0] => somador4b:BADD1.a[0]
+abcd[1] => somador4b:BADD1.a[1]
+abcd[2] => somador4b:BADD1.a[2]
+abcd[3] => somador4b:BADD1.a[3]
+bbcd[0] => somador4b:BADD1.b[0]
+bbcd[1] => somador4b:BADD1.b[1]
+bbcd[2] => somador4b:BADD1.b[2]
+bbcd[3] => somador4b:BADD1.b[3]
+cinbcd => somador4b:BADD1.cin
+coutbcd <= somador4b:BADD2.cout
+s[0] <= somador4b:BADD2.soma[0]
+s[1] <= somador4b:BADD2.soma[1]
+s[2] <= somador4b:BADD2.soma[2]
+s[3] <= somador4b:BADD2.soma[3]
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add3|somador4b:BADD1
+a[0] => somador1b:s1.x
+a[1] => somador1b:s2.x
+a[2] => somador1b:s3.x
+a[3] => somador1b:s4.x
+b[0] => somador1b:s1.y
+b[1] => somador1b:s2.y
+b[2] => somador1b:s3.y
+b[3] => somador1b:s4.y
+cin => somador1b:s1.cin
+cout <= somador1b:s4.cout
+soma[0] <= somador1b:s1.s
+soma[1] <= somador1b:s2.s
+soma[2] <= somador1b:s3.s
+soma[3] <= somador1b:s4.s
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add3|somador4b:BADD1|somador1b:s1
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add3|somador4b:BADD1|somador1b:s2
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add3|somador4b:BADD1|somador1b:s3
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add3|somador4b:BADD1|somador1b:s4
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add3|somador4b:BADD2
+a[0] => somador1b:s1.x
+a[1] => somador1b:s2.x
+a[2] => somador1b:s3.x
+a[3] => somador1b:s4.x
+b[0] => somador1b:s1.y
+b[1] => somador1b:s2.y
+b[2] => somador1b:s3.y
+b[3] => somador1b:s4.y
+cin => somador1b:s1.cin
+cout <= somador1b:s4.cout
+soma[0] <= somador1b:s1.s
+soma[1] <= somador1b:s2.s
+soma[2] <= somador1b:s3.s
+soma[3] <= somador1b:s4.s
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add3|somador4b:BADD2|somador1b:s1
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add3|somador4b:BADD2|somador1b:s2
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add3|somador4b:BADD2|somador1b:s3
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add3|somador4b:BADD2|somador1b:s4
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add4
+abcd[0] => somador4b:BADD1.a[0]
+abcd[1] => somador4b:BADD1.a[1]
+abcd[2] => somador4b:BADD1.a[2]
+abcd[3] => somador4b:BADD1.a[3]
+bbcd[0] => somador4b:BADD1.b[0]
+bbcd[1] => somador4b:BADD1.b[1]
+bbcd[2] => somador4b:BADD1.b[2]
+bbcd[3] => somador4b:BADD1.b[3]
+cinbcd => somador4b:BADD1.cin
+coutbcd <= somador4b:BADD2.cout
+s[0] <= somador4b:BADD2.soma[0]
+s[1] <= somador4b:BADD2.soma[1]
+s[2] <= somador4b:BADD2.soma[2]
+s[3] <= somador4b:BADD2.soma[3]
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add4|somador4b:BADD1
+a[0] => somador1b:s1.x
+a[1] => somador1b:s2.x
+a[2] => somador1b:s3.x
+a[3] => somador1b:s4.x
+b[0] => somador1b:s1.y
+b[1] => somador1b:s2.y
+b[2] => somador1b:s3.y
+b[3] => somador1b:s4.y
+cin => somador1b:s1.cin
+cout <= somador1b:s4.cout
+soma[0] <= somador1b:s1.s
+soma[1] <= somador1b:s2.s
+soma[2] <= somador1b:s3.s
+soma[3] <= somador1b:s4.s
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add4|somador4b:BADD1|somador1b:s1
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add4|somador4b:BADD1|somador1b:s2
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add4|somador4b:BADD1|somador1b:s3
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add4|somador4b:BADD1|somador1b:s4
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add4|somador4b:BADD2
+a[0] => somador1b:s1.x
+a[1] => somador1b:s2.x
+a[2] => somador1b:s3.x
+a[3] => somador1b:s4.x
+b[0] => somador1b:s1.y
+b[1] => somador1b:s2.y
+b[2] => somador1b:s3.y
+b[3] => somador1b:s4.y
+cin => somador1b:s1.cin
+cout <= somador1b:s4.cout
+soma[0] <= somador1b:s1.s
+soma[1] <= somador1b:s2.s
+soma[2] <= somador1b:s3.s
+soma[3] <= somador1b:s4.s
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add4|somador4b:BADD2|somador1b:s1
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add4|somador4b:BADD2|somador1b:s2
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add4|somador4b:BADD2|somador1b:s3
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR1|somadorBCD:fis_add4|somador4b:BADD2|somador1b:s4
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2
+clock => binary_counter:count_1.clock
+clock => binary_counter:count_2.clock
+clock => binary_counter:count_3.clock
+clock => binary_counter:count_4.clock
+clock => binary_counter:count_5.clock
+clock => binary_counter:count_6.clock
+enable => comb.IN1
+enable => comb.IN0
+enable => comb.IN1
+enable => comb.IN1
+enable => comb.IN1
+enable => comb.IN1
+enable => comb.IN1
+enable => comb.IN1
+enable => comb.IN1
+enable => comb.IN1
+enable => comb.IN1
+enable => comb.IN1
+clear => binary_counter:count_1.clear
+clear => binary_counter:count_2.clear
+clear => binary_counter:count_3.clear
+clear => binary_counter:count_4.clear
+clear => binary_counter:count_5.clear
+clear => binary_counter:count_6.clear
+preset => comb.IN1
+preset => comb.IN1
+preset => comb.IN1
+preset => comb.IN1
+preset => comb.IN1
+preset => comb.IN1
+preset => load1[3].OUTPUTSELECT
+preset => load1[2].OUTPUTSELECT
+preset => load1[1].OUTPUTSELECT
+preset => load1[0].OUTPUTSELECT
+preset => load2[3].OUTPUTSELECT
+preset => load2[2].OUTPUTSELECT
+preset => load2[1].OUTPUTSELECT
+preset => load2[0].OUTPUTSELECT
+preset => load3[3].OUTPUTSELECT
+preset => load3[2].OUTPUTSELECT
+preset => load3[1].OUTPUTSELECT
+preset => load3[0].OUTPUTSELECT
+preset => load4[3].OUTPUTSELECT
+preset => load4[2].OUTPUTSELECT
+preset => load4[1].OUTPUTSELECT
+preset => load4[0].OUTPUTSELECT
+preset => load5[3].OUTPUTSELECT
+preset => load5[2].OUTPUTSELECT
+preset => load5[1].OUTPUTSELECT
+preset => load5[0].OUTPUTSELECT
+preset => load6[3].OUTPUTSELECT
+preset => load6[2].OUTPUTSELECT
+preset => load6[1].OUTPUTSELECT
+preset => load6[0].OUTPUTSELECT
+fischer => comb.IN0
+fischer => comb.IN0
+fischer => comb.IN0
+fischer => comb.IN0
+fischer => comb.IN0
+fischer => comb.IN0
+fischer => load3.OUTPUTSELECT
+fischer => load3.OUTPUTSELECT
+fischer => load3.OUTPUTSELECT
+fischer => load3.OUTPUTSELECT
+fischer => load4.OUTPUTSELECT
+fischer => load4.OUTPUTSELECT
+fischer => load4.OUTPUTSELECT
+fischer => load4.OUTPUTSELECT
+fischer => load5.OUTPUTSELECT
+fischer => load5.OUTPUTSELECT
+fischer => load5.OUTPUTSELECT
+fischer => load5.OUTPUTSELECT
+fischer => load6.OUTPUTSELECT
+fischer => load6.OUTPUTSELECT
+fischer => load6.OUTPUTSELECT
+fischer => load6.OUTPUTSELECT
+fischer => comb.IN1
+fischer => comb.IN1
+fischer => comb.IN1
+fischer => comb.IN1
+fischer => comb.IN1
+fischer => comb.IN1
+bron => comb.IN1
+bron => comb.IN1
+bron => comb.IN1
+bron => comb.IN1
+bron => comb.IN1
+bron => comb.IN1
+bron => comb.IN1
+bron => comb.IN1
+bron => comb.IN1
+bron => comb.IN1
+bron => comb.IN1
+bron => comb.IN1
+delta1[0] => somadorBCD:fis_add1.bbcd[0]
+delta1[1] => somadorBCD:fis_add1.bbcd[1]
+delta1[2] => somadorBCD:fis_add1.bbcd[2]
+delta1[3] => somadorBCD:fis_add1.bbcd[3]
+delta2[0] => somadorBCD:fis_add2.bbcd[0]
+delta2[1] => somadorBCD:fis_add2.bbcd[1]
+delta2[2] => somadorBCD:fis_add2.bbcd[2]
+delta2[3] => somadorBCD:fis_add2.bbcd[3]
+preset1[0] => load5[0].DATAB
+preset1[1] => load5[1].DATAB
+preset1[2] => load5[2].DATAB
+preset1[3] => load5[3].DATAB
+preset2[0] => load6[0].DATAB
+preset2[1] => load6[1].DATAB
+preset2[2] => load6[2].DATAB
+preset2[3] => load6[3].DATAB
+q1[0] <= binary_counter:count_1.q[0]
+q1[1] <= binary_counter:count_1.q[1]
+q1[2] <= binary_counter:count_1.q[2]
+q1[3] <= binary_counter:count_1.q[3]
+q2[0] <= binary_counter:count_2.q[0]
+q2[1] <= binary_counter:count_2.q[1]
+q2[2] <= binary_counter:count_2.q[2]
+q2[3] <= binary_counter:count_2.q[3]
+q3[0] <= binary_counter:count_3.q[0]
+q3[1] <= binary_counter:count_3.q[1]
+q3[2] <= binary_counter:count_3.q[2]
+q3[3] <= binary_counter:count_3.q[3]
+q4[0] <= binary_counter:count_4.q[0]
+q4[1] <= binary_counter:count_4.q[1]
+q4[2] <= binary_counter:count_4.q[2]
+q4[3] <= binary_counter:count_4.q[3]
+q5[0] <= binary_counter:count_5.q[0]
+q5[1] <= binary_counter:count_5.q[1]
+q5[2] <= binary_counter:count_5.q[2]
+q5[3] <= binary_counter:count_5.q[3]
+q6[0] <= binary_counter:count_6.q[0]
+q6[1] <= binary_counter:count_6.q[1]
+q6[2] <= binary_counter:count_6.q[2]
+q6[3] <= binary_counter:count_6.q[3]
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_1
+clock => qi[0].CLK
+clock => qi[1].CLK
+clock => qi[2].CLK
+clock => qi[3].CLK
+clear => process_0.IN1
+clear => process_0.IN0
+load => qi[0].OUTPUTSELECT
+load => qi[1].OUTPUTSELECT
+load => qi[2].OUTPUTSELECT
+load => qi[3].OUTPUTSELECT
+enable => process_0.IN1
+enable => process_0.IN1
+enable => qi[0].OUTPUTSELECT
+enable => qi[1].OUTPUTSELECT
+enable => qi[2].OUTPUTSELECT
+enable => qi[3].OUTPUTSELECT
+sentido => process_0.IN1
+sentido => process_0.IN1
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => process_0.IN1
+sentido => process_0.IN1
+decade => process_0.IN1
+decade => process_0.IN1
+decade => process_0.IN1
+decade => qi[2].ADATA
+decade => qi[1].ADATA
+l[0] => qi[0].DATAB
+l[1] => qi[1].DATAB
+l[2] => qi[2].DATAB
+l[3] => qi[3].DATAB
+q[0] <= qi[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= qi[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= qi[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= qi[3].DB_MAX_OUTPUT_PORT_TYPE
+rco <= rco.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_2
+clock => qi[0].CLK
+clock => qi[1].CLK
+clock => qi[2].CLK
+clock => qi[3].CLK
+clear => process_0.IN1
+clear => process_0.IN0
+load => qi[0].OUTPUTSELECT
+load => qi[1].OUTPUTSELECT
+load => qi[2].OUTPUTSELECT
+load => qi[3].OUTPUTSELECT
+enable => process_0.IN1
+enable => process_0.IN1
+enable => qi[0].OUTPUTSELECT
+enable => qi[1].OUTPUTSELECT
+enable => qi[2].OUTPUTSELECT
+enable => qi[3].OUTPUTSELECT
+sentido => process_0.IN1
+sentido => process_0.IN1
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => process_0.IN1
+sentido => process_0.IN1
+decade => process_0.IN1
+decade => process_0.IN1
+decade => process_0.IN1
+decade => qi[2].ADATA
+decade => qi[1].ADATA
+l[0] => qi[0].DATAB
+l[1] => qi[1].DATAB
+l[2] => qi[2].DATAB
+l[3] => qi[3].DATAB
+q[0] <= qi[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= qi[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= qi[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= qi[3].DB_MAX_OUTPUT_PORT_TYPE
+rco <= rco.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_3
+clock => qi[0].CLK
+clock => qi[1].CLK
+clock => qi[2].CLK
+clock => qi[3].CLK
+clear => process_0.IN1
+clear => process_0.IN0
+load => qi[0].OUTPUTSELECT
+load => qi[1].OUTPUTSELECT
+load => qi[2].OUTPUTSELECT
+load => qi[3].OUTPUTSELECT
+enable => process_0.IN1
+enable => process_0.IN1
+enable => qi[0].OUTPUTSELECT
+enable => qi[1].OUTPUTSELECT
+enable => qi[2].OUTPUTSELECT
+enable => qi[3].OUTPUTSELECT
+sentido => process_0.IN1
+sentido => process_0.IN1
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => process_0.IN1
+sentido => process_0.IN1
+decade => process_0.IN1
+decade => process_0.IN1
+decade => process_0.IN1
+decade => qi[2].ADATA
+decade => qi[1].ADATA
+l[0] => qi[0].DATAB
+l[1] => qi[1].DATAB
+l[2] => qi[2].DATAB
+l[3] => qi[3].DATAB
+q[0] <= qi[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= qi[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= qi[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= qi[3].DB_MAX_OUTPUT_PORT_TYPE
+rco <= rco.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_4
+clock => qi[0].CLK
+clock => qi[1].CLK
+clock => qi[2].CLK
+clock => qi[3].CLK
+clear => process_0.IN1
+clear => process_0.IN0
+load => qi[0].OUTPUTSELECT
+load => qi[1].OUTPUTSELECT
+load => qi[2].OUTPUTSELECT
+load => qi[3].OUTPUTSELECT
+enable => process_0.IN1
+enable => process_0.IN1
+enable => qi[0].OUTPUTSELECT
+enable => qi[1].OUTPUTSELECT
+enable => qi[2].OUTPUTSELECT
+enable => qi[3].OUTPUTSELECT
+sentido => process_0.IN1
+sentido => process_0.IN1
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => process_0.IN1
+sentido => process_0.IN1
+decade => process_0.IN1
+decade => process_0.IN1
+decade => process_0.IN1
+decade => qi[2].ADATA
+decade => qi[1].ADATA
+l[0] => qi[0].DATAB
+l[1] => qi[1].DATAB
+l[2] => qi[2].DATAB
+l[3] => qi[3].DATAB
+q[0] <= qi[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= qi[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= qi[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= qi[3].DB_MAX_OUTPUT_PORT_TYPE
+rco <= rco.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_5
+clock => qi[0].CLK
+clock => qi[1].CLK
+clock => qi[2].CLK
+clock => qi[3].CLK
+clear => process_0.IN1
+clear => process_0.IN0
+load => qi[0].OUTPUTSELECT
+load => qi[1].OUTPUTSELECT
+load => qi[2].OUTPUTSELECT
+load => qi[3].OUTPUTSELECT
+enable => process_0.IN1
+enable => process_0.IN1
+enable => qi[0].OUTPUTSELECT
+enable => qi[1].OUTPUTSELECT
+enable => qi[2].OUTPUTSELECT
+enable => qi[3].OUTPUTSELECT
+sentido => process_0.IN1
+sentido => process_0.IN1
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => process_0.IN1
+sentido => process_0.IN1
+decade => process_0.IN1
+decade => process_0.IN1
+decade => process_0.IN1
+decade => qi[2].ADATA
+decade => qi[1].ADATA
+l[0] => qi[0].DATAB
+l[1] => qi[1].DATAB
+l[2] => qi[2].DATAB
+l[3] => qi[3].DATAB
+q[0] <= qi[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= qi[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= qi[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= qi[3].DB_MAX_OUTPUT_PORT_TYPE
+rco <= rco.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|binary_counter:count_6
+clock => qi[0].CLK
+clock => qi[1].CLK
+clock => qi[2].CLK
+clock => qi[3].CLK
+clear => process_0.IN1
+clear => process_0.IN0
+load => qi[0].OUTPUTSELECT
+load => qi[1].OUTPUTSELECT
+load => qi[2].OUTPUTSELECT
+load => qi[3].OUTPUTSELECT
+enable => process_0.IN1
+enable => process_0.IN1
+enable => qi[0].OUTPUTSELECT
+enable => qi[1].OUTPUTSELECT
+enable => qi[2].OUTPUTSELECT
+enable => qi[3].OUTPUTSELECT
+sentido => process_0.IN1
+sentido => process_0.IN1
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => qi.OUTPUTSELECT
+sentido => process_0.IN1
+sentido => process_0.IN1
+decade => process_0.IN1
+decade => process_0.IN1
+decade => process_0.IN1
+decade => qi[2].ADATA
+decade => qi[1].ADATA
+l[0] => qi[0].DATAB
+l[1] => qi[1].DATAB
+l[2] => qi[2].DATAB
+l[3] => qi[3].DATAB
+q[0] <= qi[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= qi[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= qi[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= qi[3].DB_MAX_OUTPUT_PORT_TYPE
+rco <= rco.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add1
+abcd[0] => somador4b:BADD1.a[0]
+abcd[1] => somador4b:BADD1.a[1]
+abcd[2] => somador4b:BADD1.a[2]
+abcd[3] => somador4b:BADD1.a[3]
+bbcd[0] => somador4b:BADD1.b[0]
+bbcd[1] => somador4b:BADD1.b[1]
+bbcd[2] => somador4b:BADD1.b[2]
+bbcd[3] => somador4b:BADD1.b[3]
+cinbcd => somador4b:BADD1.cin
+coutbcd <= somador4b:BADD2.cout
+s[0] <= somador4b:BADD2.soma[0]
+s[1] <= somador4b:BADD2.soma[1]
+s[2] <= somador4b:BADD2.soma[2]
+s[3] <= somador4b:BADD2.soma[3]
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add1|somador4b:BADD1
+a[0] => somador1b:s1.x
+a[1] => somador1b:s2.x
+a[2] => somador1b:s3.x
+a[3] => somador1b:s4.x
+b[0] => somador1b:s1.y
+b[1] => somador1b:s2.y
+b[2] => somador1b:s3.y
+b[3] => somador1b:s4.y
+cin => somador1b:s1.cin
+cout <= somador1b:s4.cout
+soma[0] <= somador1b:s1.s
+soma[1] <= somador1b:s2.s
+soma[2] <= somador1b:s3.s
+soma[3] <= somador1b:s4.s
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add1|somador4b:BADD1|somador1b:s1
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add1|somador4b:BADD1|somador1b:s2
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add1|somador4b:BADD1|somador1b:s3
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add1|somador4b:BADD1|somador1b:s4
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add1|somador4b:BADD2
+a[0] => somador1b:s1.x
+a[1] => somador1b:s2.x
+a[2] => somador1b:s3.x
+a[3] => somador1b:s4.x
+b[0] => somador1b:s1.y
+b[1] => somador1b:s2.y
+b[2] => somador1b:s3.y
+b[3] => somador1b:s4.y
+cin => somador1b:s1.cin
+cout <= somador1b:s4.cout
+soma[0] <= somador1b:s1.s
+soma[1] <= somador1b:s2.s
+soma[2] <= somador1b:s3.s
+soma[3] <= somador1b:s4.s
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add1|somador4b:BADD2|somador1b:s1
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add1|somador4b:BADD2|somador1b:s2
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add1|somador4b:BADD2|somador1b:s3
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add1|somador4b:BADD2|somador1b:s4
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add2
+abcd[0] => somador4b:BADD1.a[0]
+abcd[1] => somador4b:BADD1.a[1]
+abcd[2] => somador4b:BADD1.a[2]
+abcd[3] => somador4b:BADD1.a[3]
+bbcd[0] => somador4b:BADD1.b[0]
+bbcd[1] => somador4b:BADD1.b[1]
+bbcd[2] => somador4b:BADD1.b[2]
+bbcd[3] => somador4b:BADD1.b[3]
+cinbcd => somador4b:BADD1.cin
+coutbcd <= somador4b:BADD2.cout
+s[0] <= somador4b:BADD2.soma[0]
+s[1] <= somador4b:BADD2.soma[1]
+s[2] <= somador4b:BADD2.soma[2]
+s[3] <= somador4b:BADD2.soma[3]
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add2|somador4b:BADD1
+a[0] => somador1b:s1.x
+a[1] => somador1b:s2.x
+a[2] => somador1b:s3.x
+a[3] => somador1b:s4.x
+b[0] => somador1b:s1.y
+b[1] => somador1b:s2.y
+b[2] => somador1b:s3.y
+b[3] => somador1b:s4.y
+cin => somador1b:s1.cin
+cout <= somador1b:s4.cout
+soma[0] <= somador1b:s1.s
+soma[1] <= somador1b:s2.s
+soma[2] <= somador1b:s3.s
+soma[3] <= somador1b:s4.s
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add2|somador4b:BADD1|somador1b:s1
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add2|somador4b:BADD1|somador1b:s2
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add2|somador4b:BADD1|somador1b:s3
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add2|somador4b:BADD1|somador1b:s4
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add2|somador4b:BADD2
+a[0] => somador1b:s1.x
+a[1] => somador1b:s2.x
+a[2] => somador1b:s3.x
+a[3] => somador1b:s4.x
+b[0] => somador1b:s1.y
+b[1] => somador1b:s2.y
+b[2] => somador1b:s3.y
+b[3] => somador1b:s4.y
+cin => somador1b:s1.cin
+cout <= somador1b:s4.cout
+soma[0] <= somador1b:s1.s
+soma[1] <= somador1b:s2.s
+soma[2] <= somador1b:s3.s
+soma[3] <= somador1b:s4.s
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add2|somador4b:BADD2|somador1b:s1
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add2|somador4b:BADD2|somador1b:s2
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add2|somador4b:BADD2|somador1b:s3
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add2|somador4b:BADD2|somador1b:s4
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add3
+abcd[0] => somador4b:BADD1.a[0]
+abcd[1] => somador4b:BADD1.a[1]
+abcd[2] => somador4b:BADD1.a[2]
+abcd[3] => somador4b:BADD1.a[3]
+bbcd[0] => somador4b:BADD1.b[0]
+bbcd[1] => somador4b:BADD1.b[1]
+bbcd[2] => somador4b:BADD1.b[2]
+bbcd[3] => somador4b:BADD1.b[3]
+cinbcd => somador4b:BADD1.cin
+coutbcd <= somador4b:BADD2.cout
+s[0] <= somador4b:BADD2.soma[0]
+s[1] <= somador4b:BADD2.soma[1]
+s[2] <= somador4b:BADD2.soma[2]
+s[3] <= somador4b:BADD2.soma[3]
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add3|somador4b:BADD1
+a[0] => somador1b:s1.x
+a[1] => somador1b:s2.x
+a[2] => somador1b:s3.x
+a[3] => somador1b:s4.x
+b[0] => somador1b:s1.y
+b[1] => somador1b:s2.y
+b[2] => somador1b:s3.y
+b[3] => somador1b:s4.y
+cin => somador1b:s1.cin
+cout <= somador1b:s4.cout
+soma[0] <= somador1b:s1.s
+soma[1] <= somador1b:s2.s
+soma[2] <= somador1b:s3.s
+soma[3] <= somador1b:s4.s
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add3|somador4b:BADD1|somador1b:s1
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add3|somador4b:BADD1|somador1b:s2
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add3|somador4b:BADD1|somador1b:s3
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add3|somador4b:BADD1|somador1b:s4
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add3|somador4b:BADD2
+a[0] => somador1b:s1.x
+a[1] => somador1b:s2.x
+a[2] => somador1b:s3.x
+a[3] => somador1b:s4.x
+b[0] => somador1b:s1.y
+b[1] => somador1b:s2.y
+b[2] => somador1b:s3.y
+b[3] => somador1b:s4.y
+cin => somador1b:s1.cin
+cout <= somador1b:s4.cout
+soma[0] <= somador1b:s1.s
+soma[1] <= somador1b:s2.s
+soma[2] <= somador1b:s3.s
+soma[3] <= somador1b:s4.s
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add3|somador4b:BADD2|somador1b:s1
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add3|somador4b:BADD2|somador1b:s2
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add3|somador4b:BADD2|somador1b:s3
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add3|somador4b:BADD2|somador1b:s4
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add4
+abcd[0] => somador4b:BADD1.a[0]
+abcd[1] => somador4b:BADD1.a[1]
+abcd[2] => somador4b:BADD1.a[2]
+abcd[3] => somador4b:BADD1.a[3]
+bbcd[0] => somador4b:BADD1.b[0]
+bbcd[1] => somador4b:BADD1.b[1]
+bbcd[2] => somador4b:BADD1.b[2]
+bbcd[3] => somador4b:BADD1.b[3]
+cinbcd => somador4b:BADD1.cin
+coutbcd <= somador4b:BADD2.cout
+s[0] <= somador4b:BADD2.soma[0]
+s[1] <= somador4b:BADD2.soma[1]
+s[2] <= somador4b:BADD2.soma[2]
+s[3] <= somador4b:BADD2.soma[3]
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add4|somador4b:BADD1
+a[0] => somador1b:s1.x
+a[1] => somador1b:s2.x
+a[2] => somador1b:s3.x
+a[3] => somador1b:s4.x
+b[0] => somador1b:s1.y
+b[1] => somador1b:s2.y
+b[2] => somador1b:s3.y
+b[3] => somador1b:s4.y
+cin => somador1b:s1.cin
+cout <= somador1b:s4.cout
+soma[0] <= somador1b:s1.s
+soma[1] <= somador1b:s2.s
+soma[2] <= somador1b:s3.s
+soma[3] <= somador1b:s4.s
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add4|somador4b:BADD1|somador1b:s1
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add4|somador4b:BADD1|somador1b:s2
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add4|somador4b:BADD1|somador1b:s3
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add4|somador4b:BADD1|somador1b:s4
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add4|somador4b:BADD2
+a[0] => somador1b:s1.x
+a[1] => somador1b:s2.x
+a[2] => somador1b:s3.x
+a[3] => somador1b:s4.x
+b[0] => somador1b:s1.y
+b[1] => somador1b:s2.y
+b[2] => somador1b:s3.y
+b[3] => somador1b:s4.y
+cin => somador1b:s1.cin
+cout <= somador1b:s4.cout
+soma[0] <= somador1b:s1.s
+soma[1] <= somador1b:s2.s
+soma[2] <= somador1b:s3.s
+soma[3] <= somador1b:s4.s
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add4|somador4b:BADD2|somador1b:s1
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add4|somador4b:BADD2|somador1b:s2
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add4|somador4b:BADD2|somador1b:s3
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|jogador:JOGADOR2|somadorBCD:fis_add4|somador4b:BADD2|somador1b:s4
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|setesegmentos:disp1
+entrada[0] => Mux0.IN19
+entrada[0] => Mux1.IN19
+entrada[0] => Mux2.IN19
+entrada[0] => Mux3.IN19
+entrada[0] => Mux4.IN19
+entrada[0] => Mux5.IN19
+entrada[0] => Mux6.IN19
+entrada[1] => Mux0.IN18
+entrada[1] => Mux1.IN18
+entrada[1] => Mux2.IN18
+entrada[1] => Mux3.IN18
+entrada[1] => Mux4.IN18
+entrada[1] => Mux5.IN18
+entrada[1] => Mux6.IN18
+entrada[2] => Mux0.IN17
+entrada[2] => Mux1.IN17
+entrada[2] => Mux2.IN17
+entrada[2] => Mux3.IN17
+entrada[2] => Mux4.IN17
+entrada[2] => Mux5.IN17
+entrada[2] => Mux6.IN17
+entrada[3] => Mux0.IN16
+entrada[3] => Mux1.IN16
+entrada[3] => Mux2.IN16
+entrada[3] => Mux3.IN16
+entrada[3] => Mux4.IN16
+entrada[3] => Mux5.IN16
+entrada[3] => Mux6.IN16
+saida[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|setesegmentos:disp2
+entrada[0] => Mux0.IN19
+entrada[0] => Mux1.IN19
+entrada[0] => Mux2.IN19
+entrada[0] => Mux3.IN19
+entrada[0] => Mux4.IN19
+entrada[0] => Mux5.IN19
+entrada[0] => Mux6.IN19
+entrada[1] => Mux0.IN18
+entrada[1] => Mux1.IN18
+entrada[1] => Mux2.IN18
+entrada[1] => Mux3.IN18
+entrada[1] => Mux4.IN18
+entrada[1] => Mux5.IN18
+entrada[1] => Mux6.IN18
+entrada[2] => Mux0.IN17
+entrada[2] => Mux1.IN17
+entrada[2] => Mux2.IN17
+entrada[2] => Mux3.IN17
+entrada[2] => Mux4.IN17
+entrada[2] => Mux5.IN17
+entrada[2] => Mux6.IN17
+entrada[3] => Mux0.IN16
+entrada[3] => Mux1.IN16
+entrada[3] => Mux2.IN16
+entrada[3] => Mux3.IN16
+entrada[3] => Mux4.IN16
+entrada[3] => Mux5.IN16
+entrada[3] => Mux6.IN16
+saida[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|setesegmentos:disp3
+entrada[0] => Mux0.IN19
+entrada[0] => Mux1.IN19
+entrada[0] => Mux2.IN19
+entrada[0] => Mux3.IN19
+entrada[0] => Mux4.IN19
+entrada[0] => Mux5.IN19
+entrada[0] => Mux6.IN19
+entrada[1] => Mux0.IN18
+entrada[1] => Mux1.IN18
+entrada[1] => Mux2.IN18
+entrada[1] => Mux3.IN18
+entrada[1] => Mux4.IN18
+entrada[1] => Mux5.IN18
+entrada[1] => Mux6.IN18
+entrada[2] => Mux0.IN17
+entrada[2] => Mux1.IN17
+entrada[2] => Mux2.IN17
+entrada[2] => Mux3.IN17
+entrada[2] => Mux4.IN17
+entrada[2] => Mux5.IN17
+entrada[2] => Mux6.IN17
+entrada[3] => Mux0.IN16
+entrada[3] => Mux1.IN16
+entrada[3] => Mux2.IN16
+entrada[3] => Mux3.IN16
+entrada[3] => Mux4.IN16
+entrada[3] => Mux5.IN16
+entrada[3] => Mux6.IN16
+saida[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|setesegmentos:disp4
+entrada[0] => Mux0.IN19
+entrada[0] => Mux1.IN19
+entrada[0] => Mux2.IN19
+entrada[0] => Mux3.IN19
+entrada[0] => Mux4.IN19
+entrada[0] => Mux5.IN19
+entrada[0] => Mux6.IN19
+entrada[1] => Mux0.IN18
+entrada[1] => Mux1.IN18
+entrada[1] => Mux2.IN18
+entrada[1] => Mux3.IN18
+entrada[1] => Mux4.IN18
+entrada[1] => Mux5.IN18
+entrada[1] => Mux6.IN18
+entrada[2] => Mux0.IN17
+entrada[2] => Mux1.IN17
+entrada[2] => Mux2.IN17
+entrada[2] => Mux3.IN17
+entrada[2] => Mux4.IN17
+entrada[2] => Mux5.IN17
+entrada[2] => Mux6.IN17
+entrada[3] => Mux0.IN16
+entrada[3] => Mux1.IN16
+entrada[3] => Mux2.IN16
+entrada[3] => Mux3.IN16
+entrada[3] => Mux4.IN16
+entrada[3] => Mux5.IN16
+entrada[3] => Mux6.IN16
+saida[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|setesegmentos:disp5
+entrada[0] => Mux0.IN19
+entrada[0] => Mux1.IN19
+entrada[0] => Mux2.IN19
+entrada[0] => Mux3.IN19
+entrada[0] => Mux4.IN19
+entrada[0] => Mux5.IN19
+entrada[0] => Mux6.IN19
+entrada[1] => Mux0.IN18
+entrada[1] => Mux1.IN18
+entrada[1] => Mux2.IN18
+entrada[1] => Mux3.IN18
+entrada[1] => Mux4.IN18
+entrada[1] => Mux5.IN18
+entrada[1] => Mux6.IN18
+entrada[2] => Mux0.IN17
+entrada[2] => Mux1.IN17
+entrada[2] => Mux2.IN17
+entrada[2] => Mux3.IN17
+entrada[2] => Mux4.IN17
+entrada[2] => Mux5.IN17
+entrada[2] => Mux6.IN17
+entrada[3] => Mux0.IN16
+entrada[3] => Mux1.IN16
+entrada[3] => Mux2.IN16
+entrada[3] => Mux3.IN16
+entrada[3] => Mux4.IN16
+entrada[3] => Mux5.IN16
+entrada[3] => Mux6.IN16
+saida[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|fluxoDeDados:dados|setesegmentos:disp6
+entrada[0] => Mux0.IN19
+entrada[0] => Mux1.IN19
+entrada[0] => Mux2.IN19
+entrada[0] => Mux3.IN19
+entrada[0] => Mux4.IN19
+entrada[0] => Mux5.IN19
+entrada[0] => Mux6.IN19
+entrada[1] => Mux0.IN18
+entrada[1] => Mux1.IN18
+entrada[1] => Mux2.IN18
+entrada[1] => Mux3.IN18
+entrada[1] => Mux4.IN18
+entrada[1] => Mux5.IN18
+entrada[1] => Mux6.IN18
+entrada[2] => Mux0.IN17
+entrada[2] => Mux1.IN17
+entrada[2] => Mux2.IN17
+entrada[2] => Mux3.IN17
+entrada[2] => Mux4.IN17
+entrada[2] => Mux5.IN17
+entrada[2] => Mux6.IN17
+entrada[3] => Mux0.IN16
+entrada[3] => Mux1.IN16
+entrada[3] => Mux2.IN16
+entrada[3] => Mux3.IN16
+entrada[3] => Mux4.IN16
+entrada[3] => Mux5.IN16
+entrada[3] => Mux6.IN16
+saida[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|setesegmentos:conv1
+entrada[0] => Mux0.IN19
+entrada[0] => Mux1.IN19
+entrada[0] => Mux2.IN19
+entrada[0] => Mux3.IN19
+entrada[0] => Mux4.IN19
+entrada[0] => Mux5.IN19
+entrada[0] => Mux6.IN19
+entrada[1] => Mux0.IN18
+entrada[1] => Mux1.IN18
+entrada[1] => Mux2.IN18
+entrada[1] => Mux3.IN18
+entrada[1] => Mux4.IN18
+entrada[1] => Mux5.IN18
+entrada[1] => Mux6.IN18
+entrada[2] => Mux0.IN17
+entrada[2] => Mux1.IN17
+entrada[2] => Mux2.IN17
+entrada[2] => Mux3.IN17
+entrada[2] => Mux4.IN17
+entrada[2] => Mux5.IN17
+entrada[2] => Mux6.IN17
+entrada[3] => Mux0.IN16
+entrada[3] => Mux1.IN16
+entrada[3] => Mux2.IN16
+entrada[3] => Mux3.IN16
+entrada[3] => Mux4.IN16
+entrada[3] => Mux5.IN16
+entrada[3] => Mux6.IN16
+saida[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|setesegmentos:conv2
+entrada[0] => Mux0.IN19
+entrada[0] => Mux1.IN19
+entrada[0] => Mux2.IN19
+entrada[0] => Mux3.IN19
+entrada[0] => Mux4.IN19
+entrada[0] => Mux5.IN19
+entrada[0] => Mux6.IN19
+entrada[1] => Mux0.IN18
+entrada[1] => Mux1.IN18
+entrada[1] => Mux2.IN18
+entrada[1] => Mux3.IN18
+entrada[1] => Mux4.IN18
+entrada[1] => Mux5.IN18
+entrada[1] => Mux6.IN18
+entrada[2] => Mux0.IN17
+entrada[2] => Mux1.IN17
+entrada[2] => Mux2.IN17
+entrada[2] => Mux3.IN17
+entrada[2] => Mux4.IN17
+entrada[2] => Mux5.IN17
+entrada[2] => Mux6.IN17
+entrada[3] => Mux0.IN16
+entrada[3] => Mux1.IN16
+entrada[3] => Mux2.IN16
+entrada[3] => Mux3.IN16
+entrada[3] => Mux4.IN16
+entrada[3] => Mux5.IN16
+entrada[3] => Mux6.IN16
+saida[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|setesegmentos:conv3
+entrada[0] => Mux0.IN19
+entrada[0] => Mux1.IN19
+entrada[0] => Mux2.IN19
+entrada[0] => Mux3.IN19
+entrada[0] => Mux4.IN19
+entrada[0] => Mux5.IN19
+entrada[0] => Mux6.IN19
+entrada[1] => Mux0.IN18
+entrada[1] => Mux1.IN18
+entrada[1] => Mux2.IN18
+entrada[1] => Mux3.IN18
+entrada[1] => Mux4.IN18
+entrada[1] => Mux5.IN18
+entrada[1] => Mux6.IN18
+entrada[2] => Mux0.IN17
+entrada[2] => Mux1.IN17
+entrada[2] => Mux2.IN17
+entrada[2] => Mux3.IN17
+entrada[2] => Mux4.IN17
+entrada[2] => Mux5.IN17
+entrada[2] => Mux6.IN17
+entrada[3] => Mux0.IN16
+entrada[3] => Mux1.IN16
+entrada[3] => Mux2.IN16
+entrada[3] => Mux3.IN16
+entrada[3] => Mux4.IN16
+entrada[3] => Mux5.IN16
+entrada[3] => Mux6.IN16
+saida[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|setesegmentos:conv4
+entrada[0] => Mux0.IN19
+entrada[0] => Mux1.IN19
+entrada[0] => Mux2.IN19
+entrada[0] => Mux3.IN19
+entrada[0] => Mux4.IN19
+entrada[0] => Mux5.IN19
+entrada[0] => Mux6.IN19
+entrada[1] => Mux0.IN18
+entrada[1] => Mux1.IN18
+entrada[1] => Mux2.IN18
+entrada[1] => Mux3.IN18
+entrada[1] => Mux4.IN18
+entrada[1] => Mux5.IN18
+entrada[1] => Mux6.IN18
+entrada[2] => Mux0.IN17
+entrada[2] => Mux1.IN17
+entrada[2] => Mux2.IN17
+entrada[2] => Mux3.IN17
+entrada[2] => Mux4.IN17
+entrada[2] => Mux5.IN17
+entrada[2] => Mux6.IN17
+entrada[3] => Mux0.IN16
+entrada[3] => Mux1.IN16
+entrada[3] => Mux2.IN16
+entrada[3] => Mux3.IN16
+entrada[3] => Mux4.IN16
+entrada[3] => Mux5.IN16
+entrada[3] => Mux6.IN16
+saida[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unidadeDeControle|setesegmentos:conv5
+entrada[0] => Mux0.IN19
+entrada[0] => Mux1.IN19
+entrada[0] => Mux2.IN19
+entrada[0] => Mux3.IN19
+entrada[0] => Mux4.IN19
+entrada[0] => Mux5.IN19
+entrada[0] => Mux6.IN19
+entrada[1] => Mux0.IN18
+entrada[1] => Mux1.IN18
+entrada[1] => Mux2.IN18
+entrada[1] => Mux3.IN18
+entrada[1] => Mux4.IN18
+entrada[1] => Mux5.IN18
+entrada[1] => Mux6.IN18
+entrada[2] => Mux0.IN17
+entrada[2] => Mux1.IN17
+entrada[2] => Mux2.IN17
+entrada[2] => Mux3.IN17
+entrada[2] => Mux4.IN17
+entrada[2] => Mux5.IN17
+entrada[2] => Mux6.IN17
+entrada[3] => Mux0.IN16
+entrada[3] => Mux1.IN16
+entrada[3] => Mux2.IN16
+entrada[3] => Mux3.IN16
+entrada[3] => Mux4.IN16
+entrada[3] => Mux5.IN16
+entrada[3] => Mux6.IN16
+saida[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,27 @@
+Quartus Prime Archive log --	C:/Users/renat/Documents/Poli/exp9-relogio/RelogioXadrez.qarlog
+
+Archive:	C:/Users/renat/Documents/Poli/exp9-relogio/RelogioXadrez.qar
+Date:		Sun Jun 03 02:11:58 2018
+Quartus Prime		18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/renat/Documents/Poli/exp9-relogio/RelogioXadrez.qpf
+C:/Users/renat/Documents/Poli/exp9-relogio/assets/ascii_counter.vhd
+C:/Users/renat/Documents/Poli/exp9-relogio/assets/binary_counter.vhd
+C:/Users/renat/Documents/Poli/exp9-relogio/assets/jogador.vhd
+C:/Users/renat/Documents/Poli/exp9-relogio/assets/setesegmentos.vhd
+C:/Users/renat/Documents/Poli/exp9-relogio/divisores-clock/division_counter.vhd
+C:/Users/renat/Documents/Poli/exp9-relogio/divisores-clock/divisor100hz.vhd
+C:/Users/renat/Documents/Poli/exp9-relogio/divisores-clock/divisor1hz.vhd
+C:/Users/renat/Documents/Poli/exp9-relogio/divisores-clock/divisor_9600.vhd
+C:/Users/renat/Documents/Poli/exp9-relogio/fluxoDeDados.vhd
+C:/Users/renat/Documents/Poli/exp9-relogio/somadores/somador1b.vhd
+C:/Users/renat/Documents/Poli/exp9-relogio/somadores/somador4b.vhd
+C:/Users/renat/Documents/Poli/exp9-relogio/somadores/somadorBCD.vhd
+C:/Users/renat/Documents/Poli/exp9-relogio/toplevel.qsf
+C:/Users/renat/Documents/Poli/exp9-relogio/unidadeDeControle.vhd
+c:/intelfpga_lite/18.0/quartus/bin64/assignment_defaults.qdf
+	======= Total: 16 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
